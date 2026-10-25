@@ -83,7 +83,6 @@ The About page provides information about:
 
 The Services page provides information about the plumbing services offered, including:
 
-- Plumbing tools image with descriptive alt text
 - General Plumbing Repairs
 - Leak Repairs
 - Blocked Drains
@@ -131,6 +130,7 @@ Home (index.html)
 ├── About (about.html)
 ├── Services (services.html)
 ├── Service Areas (service-areas.html)
+├── Gallery (gallery.html)
 ├── Contact (contact.html)
 └── Request a Quote (enquiry.html)
 ```
@@ -174,8 +174,8 @@ The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoin
 
 
 ## Technical SEO and Accessibility Notes
-* All six HTML pages have one page title, one meta description, and one primary `h1` heading in the repository source.
-* The current pages contain no inline `img` elements, so image alt text and descriptive image filenames cannot yet be assessed. If images are added, use meaningful filenames and appropriate alt text.
+* All seven HTML pages have one page title, one meta description, and one primary `h1` heading in the repository source.
+* The homepage contains an illustrative plumbing image with descriptive alternative text; it is explicitly captioned as not verified work by Clear Blue Plumbing. The Gallery page embeds the Facebook page feed instead of copying individual images.
 * Internal navigation links connect the main pages and the quote page. Check every link again after deployment.
 * Added `robots.txt` and `sitemap.xml` for a planned GitHub Pages deployment at `https://duncan-loza.github.io/Web-Dev-/`. Confirm the published site URL and update both files if the actual deployment URL differs.
 * No search-engine indexing, page-speed score, security audit, or browser-based accessibility test has been performed.
@@ -185,6 +185,6 @@ The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoin
 
 * Added an embedded Google Maps view on the Contact and Service Areas pages using the stated address: 13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724. Visitors can also open the location in Google Maps.
 * The map embed does not require a Google Maps API key. Confirm the correct pin and address before using the site as a live business website.
-* Added an illustrative plumber-under-sink image to the homepage and a plumbing-tools image to the Services page. Both images include descriptive alternative text, dimensions, and responsive styling; the service image uses lazy loading.
+* Added an illustrative plumber-under-sink image to the homepage with descriptive alternative text and a caption clarifying it is not verified business work.
 * The homepage uses an illustrative plumbing repair photograph, clearly captioned as not verified work by Clear Blue Plumbing. Replace it with a genuine business photograph when available.
 * Image credit: MoToMo, “Plumber under kitchen sink.jpg”, Wikimedia Commons, CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Plumber_under_kitchen_sink.jpg).
