@@ -170,3 +170,7 @@ The search and filter operate in the browser and do not send visitor information
 
 ### Frequently Asked Questions Accordion
 The Services page includes an accessible FAQ accordion using the native HTML `details` and `summary` elements. Visitors can open and close each answer without additional JavaScript. The answers avoid guaranteeing price, availability, or emergency response times.
+
+
+### Asynchronous Form Submission
+Both forms now submit using JavaScript `fetch()` to the FormSubmit AJAX endpoint configured for the business recipient. The browser displays a success or failure message without a page reload. The recipient must activate the service by confirming the provider's verification email before live delivery can be confirmed. Do not treat a successful HTTP response alone as proof that the business received or read a message.
