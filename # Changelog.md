@@ -127,3 +127,8 @@
 * Tested repository content after changes by fetching the new page, script, stylesheet, and contact page from GitHub.
 * Browser interaction testing and deployment testing are still outstanding.
 
+### Contact Email Recipient
+* Configured the contact-form email link to prepare a message addressed to `info@cblue.co.za`.
+* Added a visible action that opens the visitor's default email application with the subject and message prefilled after form validation.
+* This uses a `mailto:` link, not a server-side mail service or AJAX request. The visitor must review and send the email themselves; delivery has not been independently verified.
+
