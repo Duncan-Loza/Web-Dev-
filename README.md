@@ -166,3 +166,7 @@ The forms currently validate and prepare information in the browser. They do not
 The Services page includes a client-side search field and category filter. Visitors can search service names and descriptions or filter by service category. JavaScript updates the visible service cards and reports the number of matching results without reloading the page.
 
 The search and filter operate in the browser and do not send visitor information to a server.
+
+
+### Frequently Asked Questions Accordion
+The Services page includes an accessible FAQ accordion using the native HTML `details` and `summary` elements. Visitors can open and close each answer without additional JavaScript. The answers avoid guaranteeing price, availability, or emergency response times.
