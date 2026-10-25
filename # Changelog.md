@@ -168,3 +168,14 @@
 ### Important Verification Limitation
 * The endpoint is configured for `info@cblue.co.za`, but the recipient must complete FormSubmit's email activation step.
 * No real test submission or inbox receipt has been verified in this session. Browser testing, provider activation, and confirmation of delivery remain outstanding.
+
+
+## Part 3 — Technical SEO Files and Source Checks
+
+* Added `robots.txt` with crawler access for the public site and a sitemap reference.
+* Added `sitemap.xml` listing the six HTML pages using the planned GitHub Pages URL. The URL must be confirmed after deployment and updated if different.
+* Re-checked the six HTML documents for one title, one meta description, and one primary `h1` each.
+* Confirmed that the current HTML files do not contain inline `img` elements; image alt text and filename checks will be required if images are added.
+* Cleaned the contact and quote form markup and removed the obsolete prepared-email preview from the contact form.
+* Updated the quote-form notice and README so they describe the configured third-party form processor and its activation requirement accurately.
+* These checks are source-level checks only. Deployment, browser rendering, link crawling, page speed, and actual form delivery remain unverified.
