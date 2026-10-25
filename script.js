@@ -70,4 +70,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setupForm("enquiry-form", "enquiry-feedback", "enquiry");
   setupForm("contact-form", "contact-feedback", "contact");
+  const serviceSearch = document.getElementById("service-search");
+  const serviceCategory = document.getElementById("service-category");
+  const serviceList = document.getElementById("service-list");
+  const serviceResults = document.getElementById("service-results");
+
+  if (serviceSearch && serviceCategory && serviceList && serviceResults) {
+    const serviceCards = Array.from(serviceList.querySelectorAll("article"));
+
+    function filterServices() {
+      const query = serviceSearch.value.trim().toLowerCase();
+      const category = serviceCategory.value;
+      let visibleCount = 0;
+
+      serviceCards.forEach(function (card) {
+        const matchesText = card.textContent.toLowerCase().includes(query);
+        const matchesCategory = category === "all" || card.dataset.category === category;
+        const visible = matchesText && matchesCategory;
+        card.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+
+      serviceResults.textContent = visibleCount === 1
+        ? "Showing 1 matching service."
+        : "Showing " + visibleCount + " matching services.";
+    }
+
+    serviceSearch.addEventListener("input", filterServices);
+    serviceCategory.addEventListener("change", filterServices);
+    filterServices();
+  }
 });
