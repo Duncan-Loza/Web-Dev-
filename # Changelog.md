@@ -146,3 +146,12 @@
 ### Verification Notes
 * Checked the updated HTML and JavaScript source retrieved from the GitHub repository.
 * Browser testing of the search/filter interaction is still required before claiming the feature has been fully tested.
+
+
+## Part 3 — Services FAQ Accordion
+
+* Added a Frequently Asked Questions section to `services.html`.
+* Used native HTML `details` and `summary` elements so visitors can open and close answers without an additional JavaScript dependency.
+* Added styling for spacing, borders, keyboard focus, and readable answers.
+* Kept answers factual and directed visitors to contact the business to confirm location coverage, price, and availability.
+* Browser and keyboard testing remain outstanding.
