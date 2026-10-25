@@ -103,3 +103,27 @@
 * Verified that each page contains a title and a meta description and that the Service Areas page contains its new service-area heading.
 * Browser rendering, live search indexing, and actual search ranking have not been verified.
 
+## Part 3 — Forms and Client-Side Validation
+
+### Dedicated Enquiry Page
+* Added `enquiry.html` as a separate page for service and quote enquiries.
+* Added fields for name, email, phone, work location, requested service, timing, optional budget, and a problem description.
+* Added HTML validation rules including required fields, minimum and maximum lengths, email input type, and a phone-number pattern.
+* Added a feedback region for the result of browser-side validation and a reminder that availability and price must be confirmed by the business.
+
+### Contact Form
+* Updated `contact.html` to use a distinct contact form rather than reusing the service enquiry form.
+* Added full name, email address, phone number, message type, and message fields.
+* Added validation and a prepared-message preview area.
+
+### JavaScript and Styling
+* Added `script.js` to validate form inputs, check phone-number digit counts, and display feedback without reloading the page.
+* Added styling for form feedback, submit buttons, and visible keyboard-focus states in `style.css`.
+* Added a Request a Quote navigation link to the existing pages.
+
+### Known Limitations and Testing
+* The forms currently perform client-side validation only. They do not transmit or store submissions.
+* Actual email delivery or AJAX submission requires a configured processing endpoint and a verified recipient address.
+* Tested repository content after changes by fetching the new page, script, stylesheet, and contact page from GitHub.
+* Browser interaction testing and deployment testing are still outstanding.
+
