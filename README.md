@@ -145,7 +145,7 @@ Home (index.html)
 * Added form feedback and keyboard-focus styles to `style.css`.
 
 ### Current Form Limitation
-The forms currently validate and prepare information in the browser. They do not send or store personal information. A real form-processing endpoint and a verified business recipient email address must be configured before live submission or email delivery can be tested.
+The forms use a third-party FormSubmit AJAX endpoint configured for the recipient email. The recipient must activate the service before live delivery can be confirmed. No live submission or inbox receipt has been verified.
 
 
 
@@ -167,3 +167,11 @@ Both forms now submit using JavaScript `fetch()` to the FormSubmit AJAX endpoint
 
 ### Form Processing and Privacy
 The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoint configured for `info@cblue.co.za`. This sends the form fields to a third-party processor for email delivery. The recipient must activate the service using the provider's verification email. Live delivery has not been tested or confirmed. Before using the site with real customers, verify that the recipient controls this inbox, review the provider's privacy terms, and add an appropriate privacy notice describing how submitted personal information is handled.
+
+
+## Technical SEO and Accessibility Notes
+* All six HTML pages have one page title, one meta description, and one primary `h1` heading in the repository source.
+* The current pages contain no inline `img` elements, so image alt text and descriptive image filenames cannot yet be assessed. If images are added, use meaningful filenames and appropriate alt text.
+* Internal navigation links connect the main pages and the quote page. Check every link again after deployment.
+* Added `robots.txt` and `sitemap.xml` for a planned GitHub Pages deployment at `https://duncan-loza.github.io/Web-Dev-/`. Confirm the published site URL and update both files if the actual deployment URL differs.
+* No search-engine indexing, page-speed score, security audit, or browser-based accessibility test has been performed.
