@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Send Clear Blue Plumbing an enquiry about plumbing repairs, blocked drains, leaks and other services in Witpoortjie and Roodepoort.">
+  <title>Request a Plumbing Quote | Clear Blue Plumbing</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div>
+      <a href="index.html">Clear Blue Plumbing</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="service-areas.html">Service Areas</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html" aria-current="page">Request a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h1>Request a Plumbing Quote</h1>
+      <p>Tell us what plumbing help you need and where the work is required. A final price and appointment availability must be confirmed by the business.</p>
+    </section>
+    <section>
+      <h2>Enquiry Details</h2>
+      <form id="enquiry-form" action="enquiry.html" method="post">
+        <p><label for="enquiry-name">Full name</label><input type="text" id="enquiry-name" name="name" autocomplete="name" minlength="2" maxlength="80" required></p>
+        <p><label for="enquiry-email">Email address</label><input type="email" id="enquiry-email" name="email" autocomplete="email" maxlength="120" required></p>
+        <p><label for="enquiry-phone">Phone number</label><input type="tel" id="enquiry-phone" name="phone" autocomplete="tel" pattern="[+]?[0-9 ()-]{7,20}" title="Enter a valid phone number using 7 to 20 digits, spaces, brackets, plus signs or hyphens." required></p>
+        <p><label for="enquiry-location">Suburb or area where work is needed</label><input type="text" id="enquiry-location" name="location" minlength="2" maxlength="100" required></p>
+        <p><label for="enquiry-service">Service required</label>
+          <select id="enquiry-service" name="service" required>
+            <option value="">Choose a service</option>
+            <option>General Plumbing Repairs</option><option>Leak Repairs</option><option>Blocked Drains</option><option>Toilet Repairs</option><option>Tap Repairs</option><option>Pipe Repairs</option><option>Plumbing Maintenance</option><option>Emergency Plumbing Assistance</option><option>Other</option>
+          </select>
+        </p>
+        <p><label for="enquiry-urgency">When do you need the work?</label>
+          <select id="enquiry-urgency" name="urgency" required>
+            <option value="">Choose timing</option>
+            <option value="urgent">Urgent - please contact me as soon as possible</option><option value="within-week">Within the next week</option><option value="flexible">Flexible timing</option>
+          </select>
+        </p>
+        <p><label for="enquiry-budget">Budget (optional)</label>
+          <select id="enquiry-budget" name="budget">
+            <option value="">Prefer not to say / not sure</option><option>Under R500</option><option>R500–R1,500</option><option>R1,500–R3,000</option><option>R3,000+</option><option>Need guidance before estimating</option>
+          </select>
+        </p>
+        <p><label for="enquiry-message">Describe the problem</label><textarea id="enquiry-message" name="message" rows="6" minlength="10" maxlength="1500" placeholder="Describe the issue and any useful details." required></textarea></p>
+        <p class="form-note">Do not include passwords, payment card details or other sensitive information.</p>
+        <p><button type="submit">Review Enquiry</button></p>
+        <div id="enquiry-feedback" class="form-feedback" role="status" aria-live="polite" tabindex="-1" hidden></div>
+      </form>
+      <p>Important: this student-project form currently validates and prepares your enquiry in the browser. It does not yet send or store your information. To contact the business now, call <a href="tel:+27724260645">072 426 0645</a>.</p>
+    </section>
+  </main>
+  <footer>
+    <section><h3>Clear Blue Plumbing</h3><address>13 Moller Street<br>Witpoortjie<br>Roodepoort<br>Gauteng<br>1724</address></section>
+    <section><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="contact.html">Contact</a></li><li><a href="enquiry.html">Request a Quote</a></li></ul></section>
+    <section><h3>Contact</h3><p><a href="tel:+27724260645">072 426 0645</a></p></section>
+    <p>&copy; 2026 Clear Blue Plumbing. Student project - not a live business website.</p>
+  </footer>
+</body>
+</html>
