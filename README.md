@@ -60,6 +60,7 @@ The website consists of six HTML pages, including a dedicated Request a Quote pa
 The Home page introduces Clear Blue Plumbing and includes:
 
 - Business introduction
+- Illustrative plumbing repair image with descriptive alt text
 - Main plumbing service information
 - Reasons customers may choose the business
 - Service preview
@@ -82,6 +83,7 @@ The About page provides information about:
 
 The Services page provides information about the plumbing services offered, including:
 
+- Plumbing tools image with descriptive alt text
 - General Plumbing Repairs
 - Leak Repairs
 - Blocked Drains
@@ -100,6 +102,8 @@ The site identifies Witpoortjie and Roodepoort as its primary stated service are
 The page also provides the business location:
 
 **13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724**
+
+The Contact and Service Areas pages include responsive Google Maps embeds and links to open the address in Google Maps. The map is address-based; the exact business pin should be verified before public launch.
 
 ### 5. Contact (`contact.html`)
 
@@ -175,3 +179,12 @@ The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoin
 * Internal navigation links connect the main pages and the quote page. Check every link again after deployment.
 * Added `robots.txt` and `sitemap.xml` for a planned GitHub Pages deployment at `https://duncan-loza.github.io/Web-Dev-/`. Confirm the published site URL and update both files if the actual deployment URL differs.
 * No search-engine indexing, page-speed score, security audit, or browser-based accessibility test has been performed.
+
+
+## Google Maps and Image Assets
+
+* Added an embedded Google Maps view on the Contact and Service Areas pages using the stated address: 13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724. Visitors can also open the location in Google Maps.
+* The map embed does not require a Google Maps API key. Confirm the correct pin and address before using the site as a live business website.
+* Added an illustrative plumber-under-sink image to the homepage and a plumbing-tools image to the Services page. Both images include descriptive alternative text, dimensions, and responsive styling; the service image uses lazy loading.
+* The images are illustrative stock/commons images, not verified photographs of Clear Blue Plumbing's own staff, tools, or completed jobs. Replace them with genuine business photographs when available.
+* Image credits: MoToMo, “Plumber under kitchen sink.jpg”, Wikimedia Commons, CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Plumber_under_kitchen_sink.jpg); Wesley Caribe, “Plumbing toolkit items (Unsplash).jpg”, Wikimedia Commons, CC0 1.0 (https://commons.wikimedia.org/wiki/File:Plumbing_toolkit_items_(Unsplash).jpg).
