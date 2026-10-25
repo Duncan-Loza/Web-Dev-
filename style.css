@@ -487,3 +487,71 @@ a:focus-visible {
 .faq-item p {
   margin: 0.75rem 0 0;
 }
+
+
+/* PART 3 — GOOGLE MAPS AND IMAGE PRESENTATION */
+.hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-image,
+.service-image {
+  margin: 1.25rem 0;
+}
+
+.hero-image img,
+.service-image img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+.hero-image img {
+  aspect-ratio: 4 / 3;
+}
+
+.service-image img {
+  max-height: 360px;
+  aspect-ratio: 3 / 2;
+}
+
+.hero-image figcaption,
+.service-image figcaption {
+  margin-top: 0.5rem;
+  color: #475569;
+  font-size: 0.85rem;
+}
+
+.map-frame {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid #cbd5e1;
+  background: #e2e8f0;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 420px;
+  border: 0;
+}
+
+.map-section > p {
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 760px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .map-frame iframe {
+    height: 320px;
+  }
+}
