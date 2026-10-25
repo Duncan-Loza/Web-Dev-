@@ -141,3 +141,20 @@ Home
 ├── Services
 ├── Service Areas
 └── Contact
+
+## Part 3 Development Notes
+
+### SEO and Page Structure
+* Added unique page titles and meta descriptions to the existing pages.
+* Corrected the Service Areas page so its content describes the local service area rather than duplicating the Services page.
+* Corrected the external stylesheet links so each page references the root-level `style.css` file.
+
+### Forms
+* Added `enquiry.html` for service and quote enquiries.
+* Updated `contact.html` to provide a separate general contact form.
+* Added `script.js` for client-side validation and feedback.
+* Added form feedback and keyboard-focus styles to `style.css`.
+
+### Current Form Limitation
+The forms currently validate and prepare information in the browser. They do not send or store personal information. A real form-processing endpoint and a verified business recipient email address must be configured before live submission or email delivery can be tested.
+
