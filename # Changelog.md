@@ -132,3 +132,17 @@
 * Added a visible action that opens the visitor's default email application with the subject and message prefilled after form validation.
 * This uses a `mailto:` link, not a server-side mail service or AJAX request. The visitor must review and send the email themselves; delivery has not been independently verified.
 
+
+
+## Part 3 — Interactive Service Search and Filtering
+
+### Services Page
+* Added a search field that filters service cards by words in their titles and descriptions.
+* Added a category selector for repairs, drains and blockages, maintenance, and urgent assistance.
+* Added a live status message showing how many services match the current search and category.
+* Added category data attributes to service cards so the JavaScript can filter them without reloading the page.
+* Added responsive styling and a reduced-motion preference for the service-card transition.
+
+### Verification Notes
+* Checked the updated HTML and JavaScript source retrieved from the GitHub repository.
+* Browser testing of the search/filter interaction is still required before claiming the feature has been fully tested.
