@@ -203,3 +203,13 @@
 * Removed the generic plumbing-tools image from `services.html` because it made the page feel less authentic.
 * Removed the associated service-image styling and updated the README image notes and credits.
 * Kept the homepage image for now, with its caption identifying it as illustrative rather than verified business work.
+
+
+## Part 3 — Business Gallery Page
+
+* Added `gallery.html` with a Facebook Page Plugin embed for the Clear Blu Plumbing Facebook page supplied by the user.
+* Added a direct link to the Facebook page as a fallback if the embedded timeline is blocked or unavailable.
+* Added Gallery to the navigation across all seven HTML pages.
+* Added responsive styling for the embedded feed.
+* Documented that Facebook controls the visibility and availability of posts and that individual photos have not been downloaded or copied into the repository.
+* The live Facebook embed still needs to be checked in a browser after deployment.
