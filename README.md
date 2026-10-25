@@ -158,3 +158,11 @@ Home
 ### Current Form Limitation
 The forms currently validate and prepare information in the browser. They do not send or store personal information. A real form-processing endpoint and a verified business recipient email address must be configured before live submission or email delivery can be tested.
 
+
+
+## Part 3 Interactive Features
+
+### Services Search and Filter
+The Services page includes a client-side search field and category filter. Visitors can search service names and descriptions or filter by service category. JavaScript updates the visible service cards and reports the number of matching results without reloading the page.
+
+The search and filter operate in the browser and do not send visitor information to a server.
