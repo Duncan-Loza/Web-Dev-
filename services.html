@@ -84,8 +84,26 @@
       <p>
         Clear Blue Plumbing provides a range of plumbing services for
         residential properties, rental properties, and small businesses.
-        Contact us to discuss your specific plumbing requirements.
+        Search the list or choose a category to find the service you need.
       </p>
+
+      <div class="service-tools">
+        <label for="service-search">Search plumbing services</label>
+        <input id="service-search" type="search" placeholder="e.g. leaking tap or drain" aria-describedby="service-search-help">
+        <p id="service-search-help" class="form-note">You can search by service name or description.</p>
+
+        <label for="service-category">Filter by category</label>
+        <select id="service-category">
+          <option value="all">All services</option>
+          <option value="repairs">Repairs</option>
+          <option value="drainage">Drains and blockages</option>
+          <option value="maintenance">Maintenance</option>
+          <option value="urgent">Urgent assistance</option>
+        </select>
+        <p id="service-results" class="form-feedback" role="status" aria-live="polite">Showing all 8 services.</p>
+      </div>
+
+      <div id="service-list">
 
 
       <!-- Service 1 -->
