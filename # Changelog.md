@@ -179,3 +179,20 @@
 * Cleaned the contact and quote form markup and removed the obsolete prepared-email preview from the contact form.
 * Updated the quote-form notice and README so they describe the configured third-party form processor and its activation requirement accurately.
 * These checks are source-level checks only. Deployment, browser rendering, link crawling, page speed, and actual form delivery remain unverified.
+
+
+## Part 3 — Google Maps and Image Presentation
+
+### Google Maps
+* Added responsive Google Maps iframe embeds to `contact.html` and `service-areas.html`, using the address stated in the project.
+* Added descriptive iframe titles, lazy loading, and external links that open the location in Google Maps in a new tab with `noopener noreferrer`.
+* No Google Maps API key is required for this address-based embed.
+* The exact business pin and live map display still need to be checked in a browser before deployment.
+
+### Images and Accessibility
+* Added a plumbing repair illustration to the homepage and plumbing tools image to the Services page.
+* Used descriptive alt text and intrinsic image dimensions; set the service image to lazy-load.
+* Added responsive image styling, rounded corners, captions, and a responsive homepage hero layout.
+* Captions clarify that these are illustrative photographs and are not verified images of Clear Blue Plumbing's own staff, equipment, or completed work.
+* Recorded image source and license information in the README.
+* Image loading, crop, and mobile layout have not been browser-tested yet.
