@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const phone = form.querySelector('input[type="tel"]');
     if (phone) {
       phone.addEventListener("input", function () {
-        const digits = phone.value.replace(/\D/g, "");
+        const digits = phone.value.replace(/\\D/g, "");
         phone.setCustomValidity(
           digits.length >= 7 && digits.length <= 15
             ? ""
@@ -16,60 +16,61 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", async function (event) {
       event.preventDefault();
+
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
 
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton ? submitButton.textContent : "";
       const data = new FormData(form);
-      const name = String(data.get("name") || "").trim();
-      const location = String(data.get("location") || "").trim();
-      const urgency = String(data.get("urgency") || "");
-      let message;
+      const emailInput = form.querySelector('input[type="email"]');
+      const replyTo = form.querySelector('input[name="_replyto"]');
+      if (replyTo && emailInput) replyTo.value = emailInput.value.trim();
 
-      if (formType === "enquiry") {
-        message = "Thank you, " + name + ". Your enquiry details passed the browser validation checks. ";
-        if (urgency === "urgent") {
-          message += "You marked the request as urgent. ";
-        }
-        if (location) {
-          message += "The requested work location is " + location + ". ";
-        }
-        message += "Clear Blue Plumbing still needs to confirm service availability, appointment timing and price. This demo does not send or store your enquiry. Please call 072 426 0645 to contact the business.";
-      } else {
-        const preview = document.getElementById("contact-email-preview");
-        const subject = "Website contact message - " + String(data.get("messageType") || "General enquiry");
-        const body = [
-          "Name: " + name,
-          "Email: " + String(data.get("email") || ""),
-          "Phone: " + String(data.get("phone") || ""),
-          "Message type: " + String(data.get("messageType") || ""),
-          "",
-          "Message:",
-          String(data.get("message") || "")
-        ].join("\n");
-        if (preview) {
-          preview.value = "Subject: " + subject + "\n\n" + body;
-          preview.hidden = false;
-        }
-        const emailLink = form.querySelector("[data-email-link]");
-        if (emailLink) {
-          emailLink.href = "mailto:info@cblue.co.za?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-          emailLink.hidden = false;
-        }
-        message = "Your message passed the browser validation checks. A prepared email is available below. Choose the button to open your email application addressed to info@cblue.co.za. The message will only be sent after you review and send it.";
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
       }
-
-      feedback.textContent = message;
+      feedback.textContent = "Submitting your message securely over HTTPS. Please wait.";
       feedback.hidden = false;
       feedback.focus();
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: { "Accept": "application/json" }
+        });
+
+        const result = await response.json();
+        if (!response.ok || result.success === "false" || result.success === false) {
+          throw new Error("The form service did not accept the submission.");
+        }
+
+        if (formType === "enquiry") {
+          feedback.textContent = "Thank you, " + String(data.get("name") || "") + ". Your quote enquiry was submitted to the form-processing service. The business must confirm price, appointment timing, and service availability. If the service has not yet been activated by the recipient, delivery may not complete.";
+        } else {
+          feedback.textContent = "Thank you. Your contact message was submitted to the form-processing service. The business will need to respond separately. If the service has not yet been activated by the recipient, delivery may not complete.";
+        }
+        form.reset();
+      } catch (error) {
+        feedback.textContent = "We could not confirm submission. Check your internet connection and try again, or call 072 426 0645. Do not assume your message was sent.";
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+      }
     });
   }
 
   setupForm("enquiry-form", "enquiry-feedback", "enquiry");
   setupForm("contact-form", "contact-feedback", "contact");
+
   const serviceSearch = document.getElementById("service-search");
   const serviceCategory = document.getElementById("service-category");
   const serviceList = document.getElementById("service-list");
