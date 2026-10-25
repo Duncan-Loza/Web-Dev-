@@ -53,7 +53,7 @@ The website is designed to provide these users with quick access to information 
 
 ## Website Structure
 
-The website consists of five main HTML pages.
+The website consists of six HTML pages, including a dedicated Request a Quote page added for Part 3.
 
 ### 1. Home (`index.html`)
 
@@ -95,20 +95,7 @@ The Services page provides information about the plumbing services offered, incl
 
 The Service Areas page provides information about the locations served by Clear Blue Plumbing.
 
-The listed areas include:
-
-- Witpoortjie
-- Florida
-- Horizon
-- Wilropark
-- Constantia Kloof
-- Weltevredenpark
-- Discovery
-- Little Falls
-- Helderkruin
-- Ruimsig
-- Allen's Nek
-- Kloofendal
+The site identifies Witpoortjie and Roodepoort as its primary stated service area. Customers should contact the business to confirm availability for a specific address.
 
 The page also provides the business location:
 
@@ -133,14 +120,16 @@ The page includes:
 
 ## Sitemap
 
-The website sitemap is structured as follows:
+The website structure is:
 
 ```text
-Home
-├── About
-├── Services
-├── Service Areas
-└── Contact
+Home (index.html)
+├── About (about.html)
+├── Services (services.html)
+├── Service Areas (service-areas.html)
+├── Contact (contact.html)
+└── Request a Quote (enquiry.html)
+```
 
 ## Part 3 Development Notes
 
@@ -174,3 +163,7 @@ The Services page includes an accessible FAQ accordion using the native HTML `de
 
 ### Asynchronous Form Submission
 Both forms now submit using JavaScript `fetch()` to the FormSubmit AJAX endpoint configured for the business recipient. The browser displays a success or failure message without a page reload. The recipient must activate the service by confirming the provider's verification email before live delivery can be confirmed. Do not treat a successful HTTP response alone as proof that the business received or read a message.
+
+
+### Form Processing and Privacy
+The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoint configured for `info@cblue.co.za`. This sends the form fields to a third-party processor for email delivery. The recipient must activate the service using the provider's verification email. Live delivery has not been tested or confirmed. Before using the site with real customers, verify that the recipient controls this inbox, review the provider's privacy terms, and add an appropriate privacy notice describing how submitted personal information is handled.
