@@ -196,3 +196,10 @@
 * Captions clarify that these are illustrative photographs and are not verified images of Clear Blue Plumbing's own staff, equipment, or completed work.
 * Recorded image source and license information in the README.
 * Image loading, crop, and mobile layout have not been browser-tested yet.
+
+
+## Part 3 — Removed Generic Plumbing Tools Image
+
+* Removed the generic plumbing-tools image from `services.html` because it made the page feel less authentic.
+* Removed the associated service-image styling and updated the README image notes and credits.
+* Kept the homepage image for now, with its caption identifying it as illustrative rather than verified business work.
