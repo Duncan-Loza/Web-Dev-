@@ -11,6 +11,7 @@
 
   <!-- Link to the external CSS file -->
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -178,167 +179,26 @@
         Send an Enquiry
       </h2>
 
-      <form
-        id="enquiry-form"
-        method="post"
-      >
-
-        <!-- Name -->
-
-        <p>
-
-          <label for="name">
-            Name
-          </label>
-
-          <br>
-
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            required
-          >
-
-        </p>
-
-
-        <!-- Email -->
-
-        <p>
-
-          <label for="email">
-            Email
-          </label>
-
-          <br>
-
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email address"
-            required
-          >
-
-        </p>
-
-
-        <!-- Phone -->
-
-        <p>
-
-          <label for="phone">
-            Phone
-          </label>
-
-          <br>
-
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Enter your phone number"
-            required
-          >
-
-        </p>
-
-
-        <!-- Service -->
-
-        <p>
-
-          <label for="service">
-            Service Required
-          </label>
-
-          <br>
-
-          <select
-            id="service"
-            name="service"
-            required
-          >
-
-            <option value="">
-              Select a service
-            </option>
-
-            <option value="General Plumbing Repairs">
-              General Plumbing Repairs
-            </option>
-
-            <option value="Leak Repairs">
-              Leak Repairs
-            </option>
-
-            <option value="Blocked Drains">
-              Blocked Drains
-            </option>
-
-            <option value="Toilet Repairs">
-              Toilet Repairs
-            </option>
-
-            <option value="Tap Repairs">
-              Tap Repairs
-            </option>
-
-            <option value="Pipe Repairs">
-              Pipe Repairs
-            </option>
-
-            <option value="Plumbing Maintenance">
-              Plumbing Maintenance
-            </option>
-
-            <option value="Emergency Plumbing Assistance">
-              Emergency Plumbing Assistance
-            </option>
-
-            <option value="Other">
-              Other
-            </option>
-
+      <form id="contact-form" action="contact.html" method="post">
+        <p><label for="contact-name">Full name</label><br><input type="text" id="contact-name" name="name" autocomplete="name" minlength="2" maxlength="80" required></p>
+        <p><label for="contact-email">Email address</label><br><input type="email" id="contact-email" name="email" autocomplete="email" maxlength="120" required></p>
+        <p><label for="contact-phone">Phone number</label><br><input type="tel" id="contact-phone" name="phone" autocomplete="tel" pattern="[+]?[0-9 ()-]{7,20}" title="Enter a valid phone number." required></p>
+        <p><label for="contact-type">Message type</label><br>
+          <select id="contact-type" name="messageType" required>
+            <option value="">Choose a message type</option>
+            <option>General question</option>
+            <option>Existing booking</option>
+            <option>Feedback</option>
+            <option>Service availability</option>
+            <option>Other</option>
           </select>
-
         </p>
-
-
-        <!-- Message -->
-
-        <p>
-
-          <label for="message">
-            Message
-          </label>
-
-          <br>
-
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Describe the plumbing issue you need help with"
-            required
-          ></textarea>
-
-        </p>
-
-
-        <!-- Submit -->
-
-        <p>
-
-          <button type="submit">
-            Submit Enquiry
-          </button>
-
-        </p>
-
-      </form>
+        <p><label for="contact-message">Full message</label><br><textarea id="contact-message" name="message" rows="5" minlength="10" maxlength="1500" placeholder="Type your message here" required></textarea></p>
+        <p class="form-note">This form validates and prepares your message in the browser. Email delivery is not configured yet.</p>
+        <p><button type="submit">Prepare Message</button></p>
+        <div id="contact-feedback" class="form-feedback" role="status" aria-live="polite" tabindex="-1" hidden></div>
+        <p><label for="contact-email-preview">Prepared email text</label><br><textarea id="contact-email-preview" rows="8" readonly hidden></textarea></p>
+      </form>/form>
 
     </section>
 
