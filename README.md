@@ -186,5 +186,5 @@ The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoin
 * Added an embedded Google Maps view on the Contact and Service Areas pages using the stated address: 13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724. Visitors can also open the location in Google Maps.
 * The map embed does not require a Google Maps API key. Confirm the correct pin and address before using the site as a live business website.
 * Added an illustrative plumber-under-sink image to the homepage and a plumbing-tools image to the Services page. Both images include descriptive alternative text, dimensions, and responsive styling; the service image uses lazy loading.
-* The images are illustrative stock/commons images, not verified photographs of Clear Blue Plumbing's own staff, tools, or completed jobs. Replace them with genuine business photographs when available.
-* Image credits: MoToMo, “Plumber under kitchen sink.jpg”, Wikimedia Commons, CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Plumber_under_kitchen_sink.jpg); Wesley Caribe, “Plumbing toolkit items (Unsplash).jpg”, Wikimedia Commons, CC0 1.0 (https://commons.wikimedia.org/wiki/File:Plumbing_toolkit_items_(Unsplash).jpg).
+* The homepage uses an illustrative plumbing repair photograph, clearly captioned as not verified work by Clear Blue Plumbing. Replace it with a genuine business photograph when available.
+* Image credit: MoToMo, “Plumber under kitchen sink.jpg”, Wikimedia Commons, CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Plumber_under_kitchen_sink.jpg).
