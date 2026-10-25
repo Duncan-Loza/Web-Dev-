@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://duncan-loza.github.io/Web-Dev-/sitemap.xml
