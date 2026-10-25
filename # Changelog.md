@@ -79,3 +79,27 @@
 * Completed navigation and contact functionality.
 * Completed project documentation.
 * Prepared the website for final testing and submission.
+
+## Part 3 — Initial SEO and Service Area Corrections
+
+### Stylesheet Path Verification
+* Corrected the stylesheet reference in `index.html`, `about.html`, `services.html`, `service-areas.html`, and `contact.html` from `css/style.css` to `style.css`, matching the stylesheet's location in the repository root.
+* Re-fetched the five HTML files from the `main` branch and verified that each references `style.css`.
+
+### SEO Metadata
+* Added a unique HTML `meta name="description"` element to each of the five existing pages.
+* Updated the home page title to target the plumbing service and Roodepoort location.
+* Updated the About, Services, Service Areas, and Contact page titles so they describe each page's distinct purpose and local context.
+* Used descriptive, location-relevant wording in titles and descriptions without making claims about rankings or guaranteed service availability.
+
+### Service Areas Page
+* Corrected the page title and main content so the page describes service areas instead of duplicating the Services page.
+* Identified Witpoortjie and Roodepoort as the stated primary service area.
+* Added guidance asking visitors to contact the business to confirm availability for addresses outside the primary area.
+* Added internal links to the contact page and telephone link to support enquiries.
+
+### Verification Notes
+* Re-fetched the five HTML pages from GitHub after the changes.
+* Verified that each page contains a title and a meta description and that the Service Areas page contains its new service-area heading.
+* Browser rendering, live search indexing, and actual search ranking have not been verified.
+
