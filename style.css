@@ -461,3 +461,29 @@ a:focus-visible {
     scroll-behavior: auto;
   }
 }
+
+
+/* PART 3 FAQ ACCORDION */
+.faq-item {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  background-color: #f8fafc;
+}
+
+.faq-item summary {
+  color: #003b5c;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+.faq-item summary:focus-visible {
+  outline: 3px solid #0284c7;
+  outline-offset: 3px;
+}
+
+.faq-item p {
+  margin: 0.75rem 0 0;
+}
