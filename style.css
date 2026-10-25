@@ -380,3 +380,50 @@ footer ul {
   }
 
 }
+
+/* PART 3 FORM FEEDBACK AND ACCESSIBILITY */
+
+button {
+  display: inline-block;
+  padding: 0.75rem 1.2rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background-color: #0066cc;
+  color: #ffffff;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004c99;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid #0284c7;
+  outline-offset: 3px;
+}
+
+.form-note {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.form-feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #0284c7;
+  background-color: #e0f2fe;
+  color: #003b5c;
+  overflow-wrap: anywhere;
+}
+
+[hidden] {
+  display: none !important;
+}
+
