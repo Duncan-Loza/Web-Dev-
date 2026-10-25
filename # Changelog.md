@@ -155,3 +155,16 @@
 * Added styling for spacing, borders, keyboard focus, and readable answers.
 * Kept answers factual and directed visitors to contact the business to confirm location coverage, price, and availability.
 * Browser and keyboard testing remain outstanding.
+
+
+## Part 3 — Asynchronous Form Submission
+
+* Added a FormSubmit AJAX processing endpoint to both the quote enquiry and general contact forms.
+* Updated the JavaScript submit handlers to validate the form, send form data using `fetch()`, disable the submit button while processing, and show success or failure feedback without reloading the page.
+* Added the visitor's email as the reply-to value so the recipient can respond to the visitor.
+* Corrected malformed closing form markup in `contact.html`.
+* Updated the form notes to explain that the third-party service must be activated by the recipient before live delivery can be verified.
+
+### Important Verification Limitation
+* The endpoint is configured for `info@cblue.co.za`, but the recipient must complete FormSubmit's email activation step.
+* No real test submission or inbox receipt has been verified in this session. Browser testing, provider activation, and confirmation of delivery remain outstanding.
