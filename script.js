@@ -54,7 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
           preview.value = "Subject: " + subject + "\n\n" + body;
           preview.hidden = false;
         }
-        message = "Your message passed the browser validation checks. The business email recipient and sending method have not been configured, so the message has not been sent or stored. You can copy the prepared message below.";
+        const emailLink = form.querySelector("[data-email-link]");
+        if (emailLink) {
+          emailLink.href = "mailto:info@cblue.co.za?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+          emailLink.hidden = false;
+        }
+        message = "Your message passed the browser validation checks. A prepared email is available below. Choose the button to open your email application addressed to info@cblue.co.za. The message will only be sent after you review and send it.";
       }
 
       feedback.textContent = message;
