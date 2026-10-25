@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const phone = form.querySelector('input[type="tel"]');
     if (phone) {
       phone.addEventListener("input", function () {
-        const digits = phone.value.replace(/\\D/g, "");
+        const digits = phone.value.replace(/\D/g, "");
         phone.setCustomValidity(
           digits.length >= 7 && digits.length <= 15
             ? ""
