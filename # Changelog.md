@@ -222,3 +222,12 @@
 * Kept the homepage focused on business information, services, service areas, and clear contact/quote actions; no Facebook feed section is included on the homepage.
 * Restored the closing structure for the main content, footer, and HTML document and retained the site's seven-page navigation.
 * Updated the README to reflect the removal of the homepage image. Browser rendering and deployment still need to be checked.
+
+
+## Part 3 — Gallery Updated with Individual Plumbing Photos
+
+* Replaced the Facebook Page Plugin gallery with six separate generic plumbing-related image tiles in `gallery.html`.
+* Added descriptive alt text, intrinsic width and height attributes, and lazy loading for the images.
+* Removed photo captions and comments; retained a short notice that the images are illustrative and are not verified examples of completed Clear Blue Plumbing work.
+* Updated the README to describe the gallery accurately.
+* Images are externally hosted, so their loading, visual content, mobile layout, and the requirement that no people appear must still be checked in a browser.
