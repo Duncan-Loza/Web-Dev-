@@ -213,3 +213,12 @@
 * Added responsive styling for the embedded feed.
 * Documented that Facebook controls the visibility and availability of posts and that individual photos have not been downloaded or copied into the repository.
 * The live Facebook embed still needs to be checked in a browser after deployment.
+
+
+## Part 3 — Homepage Repair and Removal of Unreliable Image
+
+* Rebuilt `index.html` as a complete, valid HTML document after the existing source ended with an incomplete closing tag.
+* Removed the external illustrative plumbing photograph and its caption from the homepage because the image was not displaying reliably and was not verified work by Clear Blue Plumbing.
+* Kept the homepage focused on business information, services, service areas, and clear contact/quote actions; no Facebook feed section is included on the homepage.
+* Restored the closing structure for the main content, footer, and HTML document and retained the site's seven-page navigation.
+* Updated the README to reflect the removal of the homepage image. Browser rendering and deployment still need to be checked.
