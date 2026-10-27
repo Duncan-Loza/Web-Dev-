@@ -199,3 +199,7 @@ The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoin
 * Added descriptive alt text, image dimensions, and lazy loading to each image.
 * Clarified that the images are illustrative, not verified completed jobs by Clear Blue Plumbing.
 * The images are externally hosted; image loading, mobile layout, and the absence of people remain to be checked in a browser.
+
+
+### Latest Gallery Image Change
+* Replaced the final two gallery images with externally hosted photos of a rooftop solar water-heating collector and a wall-mounted exhaust fan. They are illustrative, not verified Clear Blue Plumbing jobs; browser verification remains outstanding.
