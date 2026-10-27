@@ -174,9 +174,9 @@ The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoin
 
 ## Technical SEO and Accessibility Notes
 * All seven HTML pages have one page title, one meta description, and one primary `h1` heading in the repository source.
-* The homepage no longer relies on an external illustrative photograph. The Gallery page currently links to the business's Facebook page because individual photos have not yet been added to the repository.
+* The homepage no longer relies on an external illustrative photograph. The Gallery page contains six individual externally hosted, generic plumbing-related images with descriptive alt text and lazy loading. These are illustrative images, not verified examples of completed business work. Image loading and the no-people requirement still need visual browser verification.
 * Internal navigation links connect the main pages and the quote page. Check every link again after deployment.
-* Added `robots.txt` and `sitemap.xml` for a planned GitHub Pages deployment at `https://duncan-loza.github.io/Web-Dev-/`. Confirm the published site URL and update both files if the actual deployment URL differs.
+* Added `robots.txt` and `sitemap.xml` for a planned GitHub Pages deployment at `https://duncan-loza.github.io/Web-Dev-/`. The sitemap should include all seven HTML pages, including `gallery.html`. Confirm the published site URL and update both files if the actual deployment URL differs.
 * No search-engine indexing, page-speed score, security audit, or browser-based accessibility test has been performed.
 
 
@@ -185,3 +185,10 @@ The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoin
 * Added an embedded Google Maps view on the Contact and Service Areas pages using the stated address: 13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724. Visitors can also open the location in Google Maps.
 * The map embed does not require a Google Maps API key. Confirm the correct pin and address before using the site as a live business website.
 * Removed the external illustrative photograph from the homepage because it was not displaying reliably and was not verified work by Clear Blue Plumbing.
+
+
+### Gallery Page
+* Updated `gallery.html` to remove the Facebook embed and display six separate generic plumbing-related photos.
+* Added descriptive alternative text, image dimensions, and lazy loading to each gallery image.
+* Added a note explaining that the photos are illustrative and do not represent verified completed jobs by Clear Blue Plumbing.
+* The images are externally hosted; visual checks for image loading, mobile layout, and the absence of people remain outstanding.
