@@ -491,37 +491,66 @@ a:focus-visible {
 
 
 
-/* PART 3 — FACEBOOK GALLERY */
-.facebook-gallery-section {
-  text-align: left;
+/* PART 3 — RESPONSIVE PLUMBING GALLERY */
+.gallery-intro {
+  text-align: center;
 }
 
-.facebook-gallery-frame {
-  width: 100%;
-  max-width: 560px;
-  min-height: 300px;
-  margin: 1.5rem auto;
+.gallery-intro .form-note {
+  margin: 0.5rem auto 0;
+}
+
+.plumbing-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.gallery-item {
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  border: 1px solid #cbd5e1;
   border-radius: 0.75rem;
-  background: #f1f5f9;
+  background: #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  aspect-ratio: 4 / 3;
 }
 
-.facebook-gallery-frame iframe {
-  display: block;
+.gallery-item img {
   width: 100%;
-  max-width: 500px;
-  min-height: 800px;
-  margin: 0 auto;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease-in-out;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.035);
+}
+
+.gallery-contact {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .plumbing-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 600px) {
-  .facebook-gallery-frame {
-    margin: 1rem 0;
-    border-radius: 0.5rem;
+  .plumbing-gallery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .facebook-gallery-frame iframe {
-    min-height: 650px;
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item img {
+    transition: none;
   }
 }
