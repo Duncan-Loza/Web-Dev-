@@ -231,3 +231,12 @@
 * Removed photo captions and comments; retained a short notice that the images are illustrative and are not verified examples of completed Clear Blue Plumbing work.
 * Updated the README to describe the gallery accurately.
 * Images are externally hosted, so their loading, visual content, mobile layout, and the requirement that no people appear must still be checked in a browser.
+
+
+## Part 3 — Current Source and Documentation Corrections
+
+* Updated `sitemap.xml` to include `gallery.html`, bringing the sitemap to seven HTML page URLs for the planned GitHub Pages address.
+* Updated `README.md` to describe the current six-image gallery and removed duplicated gallery notes.
+* The earlier entries above record changes made at earlier stages; where a later entry describes a replacement (for example, replacing the Facebook gallery embed with individual images), the later entry describes the current source.
+* Confirmed source-level structure for all seven HTML pages: each has a document type, one page title, one meta description, one primary `h1`, and a reference to `style.css`. These checks do not establish browser rendering or live functionality.
+* External gallery images still need browser verification for successful loading and for confirming that no people appear.
