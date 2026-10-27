@@ -192,3 +192,10 @@ The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoin
 * Added descriptive alternative text, image dimensions, and lazy loading to each gallery image.
 * Added a note explaining that the photos are illustrative and do not represent verified completed jobs by Clear Blue Plumbing.
 * The images are externally hosted; visual checks for image loading, mobile layout, and the absence of people remain outstanding.
+
+
+### Gallery Page Update
+* Replaced the Facebook embed with six separate generic plumbing-related photos in `gallery.html`.
+* Added descriptive alt text, image dimensions, and lazy loading to each image.
+* Clarified that the images are illustrative, not verified completed jobs by Clear Blue Plumbing.
+* The images are externally hosted; image loading, mobile layout, and the absence of people remain to be checked in a browser.
