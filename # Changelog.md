@@ -240,3 +240,10 @@
 * The earlier entries above record changes made at earlier stages; where a later entry describes a replacement (for example, replacing the Facebook gallery embed with individual images), the later entry describes the current source.
 * Confirmed source-level structure for all seven HTML pages: each has a document type, one page title, one meta description, one primary `h1`, and a reference to `style.css`. These checks do not establish browser rendering or live functionality.
 * External gallery images still need browser verification for successful loading and for confirming that no people appear.
+
+
+## Part 3 — Gallery Image Replacement
+
+* Replaced the final two gallery image URLs in `gallery.html` with a rooftop solar water-heating collector and a wall-mounted exhaust fan, matching the subjects requested.
+* Added descriptive alternative text and retained lazy loading and image dimensions.
+* The two replacement photos are externally hosted on Wikimedia Commons; they are illustrative images, not photos of confirmed Clear Blue Plumbing jobs. Their browser loading and visual appearance should still be checked on the deployed site.
