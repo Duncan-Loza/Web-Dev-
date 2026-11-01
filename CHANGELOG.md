@@ -395,3 +395,13 @@
 - Recorded the student's confirmation that the profile displays 13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724.
 - Clarified that both map embeds still use an address-based Google Maps search, not a verified business-place pin. The exact Google Maps profile URL is still required before changing the embeds to the business listing itself.
 - Updated the README testing notes to reflect the browser and cross-browser checks reported by the student, while keeping keyboard/screen-reader testing, Lighthouse evidence and live form delivery as outstanding.
+
+
+## 2026-11-01 — Google Maps business pin linked
+
+- Used the Google Maps directions/share URL supplied by the student for CLEAR BLUE PLUMBING at 13 Moller St, Witpoortjie, Roodepoort, 1724.
+- Updated the embedded maps on `contact.html` and `service-areas.html` to use the supplied business pin coordinates: latitude `-26.1347313`, longitude `27.831254`.
+- Updated both external map links to open Google Maps centred on the supplied business pin coordinates.
+- Retained the confirmed 13 Moller Street address throughout the website.
+- Updated the README with the business listing source, pin coordinates and Google Maps reference.
+- Repository source was updated; check both map embeds visually on the deployed website to confirm the marker and map load correctly.
