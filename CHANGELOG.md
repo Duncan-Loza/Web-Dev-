@@ -422,7 +422,7 @@
 
 - Student tested the website using Windows Narrator and reported that the screen reader worked as expected during the test.
 - Updated the README to record this as a student-reported screen-reader check.
-- A comprehensive review of every page and interactive state, and Lighthouse accessibility audit evidence, remain outstanding.
+- A comprehensive review of every page and interactive state remains outstanding. Automated Lighthouse accessibility scores for the Home page are now recorded in the README; these do not replace a manual WCAG review.
 
 
 ## 2026-11-01 — Lighthouse testing evidence recorded
@@ -433,3 +433,10 @@
 - Embedded both screenshots in the README using relative links to the original uploaded filenames; no image files were altered or renamed.
 - Updated the testing status to remove the earlier statement that Lighthouse evidence was outstanding.
 - Lighthouse scores are student-reported and may vary between runs. Automated Lighthouse accessibility checks do not replace a comprehensive manual WCAG review.
+
+
+## 2026-11-01 — Lighthouse evidence status correction
+
+- Corrected the earlier Windows Narrator entry so it no longer describes Lighthouse evidence as outstanding.
+- The Home page's student-reported desktop and mobile Lighthouse results and original screenshots are now documented in the README.
+- Comprehensive manual accessibility review and all-page Lighthouse testing are not claimed as completed.
