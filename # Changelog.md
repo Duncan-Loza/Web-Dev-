@@ -247,3 +247,13 @@
 * Replaced the final two gallery image URLs in `gallery.html` with a rooftop solar water-heating collector and a wall-mounted exhaust fan, matching the subjects requested.
 * Added descriptive alternative text and retained lazy loading and image dimensions.
 * The two replacement photos are externally hosted on Wikimedia Commons; they are illustrative images, not photos of confirmed Clear Blue Plumbing jobs. Their browser loading and visual appearance should still be checked on the deployed site.
+
+
+## Part 3 — Form Validation and Mobile Responsiveness
+
+* Strengthened the JavaScript validation used by both `contact.html` and `enquiry.html`.
+* Added trimmed-text checks so whitespace-only names, messages, and enquiry locations are rejected; the message and name fields must still meet their HTML minimum lengths.
+* Added phone-number validation that counts digits and accepts 7 to 15 digits, alongside the existing HTML required, email, pattern, minlength, maxlength, and select-field validation.
+* Kept asynchronous form submission, disabled the submit button while sending, and retained visible success/failure feedback. Actual email delivery still depends on activation by the third-party form recipient and must be tested.
+* Improved small-screen navigation with a two-column link layout, made form controls and buttons easier to use on touch screens, constrained content to the viewport, and made the embedded map responsive.
+* Existing tablet and mobile breakpoints were retained and extended. Browser testing at actual mobile and tablet viewport sizes remains required.
