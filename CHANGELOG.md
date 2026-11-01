@@ -355,3 +355,14 @@
 * Updated the README hosting details, published URL, sitemap URL and crawler-file URL to identify GitHub Pages as the deployment platform.
 * Retained earlier Netlify references in this changelog only where they describe historical development decisions; they are not current deployment instructions.
 * Source files were updated in the `main` branch. The GitHub Pages build and live URLs still need to be checked in a browser after GitHub finishes publishing.
+
+
+## Responsive CSS refinement
+- Rebuilt `style.css` as a consolidated stylesheet instead of layering further overrides onto the earlier Part 2 rules.
+- Standardised colour, spacing, typography, content widths, borders and shadows using CSS custom properties.
+- Refined the desktop header/navigation and introduced a clearer tablet navigation layout.
+- Improved mobile navigation, page gutters, banner spacing, form controls, footer stacking and touch target sizing.
+- Added responsive two-column service cards and gallery layouts that collapse to one column on narrow screens.
+- Refined the gallery lightbox, map frame, FAQ panels, service filters and form feedback styling.
+- Preserved visible keyboard focus, skip-link styling and reduced-motion support.
+- Source-level update only; verify the deployed appearance at desktop, tablet and mobile widths after GitHub Pages publishes the commit.
