@@ -51,6 +51,14 @@ The GitHub Pages URL includes the repository name because this is a project site
 - Off-page SEO is not claimed as completed. Future work should only use verified business details to create or maintain a Google Business Profile, request genuine customer reviews, and earn relevant local directory citations or links. Do not create fake reviews or listings.
 - Local SEO work includes consistent location wording and a map embed. No Google Business Profile, backlinks, directory citations or social-media campaign is claimed as completed.
 
+### SEO implementation notes
+- Each page has a unique, descriptive title and meta description written for its own search intent; social preview titles and descriptions use the same page-specific wording.
+- Open Graph locale metadata is set to `en_ZA`.
+- Each page includes Schema.org `WebPage` JSON-LD with its canonical URL, language, description and parent website. This describes the page; it does not claim verified business credentials.
+- No `LocalBusiness` markup, review ratings, opening hours or unconfirmed location/service claims are published as structured data.
+- The sitemap and robots file are available at the published GitHub Pages URLs above. Search Console verification, sitemap submission, indexing status and search performance have not been confirmed.
+- Keyword themes are incorporated naturally into page titles, headings and copy. No keyword-volume or ranking study is claimed.
+
 ## Forms: processing, privacy and limitations
 Both forms submit to the FormSubmit AJAX endpoint configured for `info@cblue.co.za`. The recipient must activate the FormSubmit service, and the address must be confirmed as controlled by the intended recipient. A successful browser response is not proof that a message reached or was read in the inbox. No live delivery test has been confirmed.
 
