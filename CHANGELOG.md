@@ -319,3 +319,6 @@
 * Retained the existing semantic HTML cards as a fallback if the JSON request fails or contains no valid records.
 * Connected the loaded cards to the existing text search, category filter, clear-filters control and no-results message.
 * Source files and the JSON data structure have been checked in GitHub. The deployed fetch request and fallback behaviour still require browser testing.
+
+
+* Follow-up source check: added the deferred script.js reference to gallery.html so the lightbox controls are initialised on the Gallery page.
