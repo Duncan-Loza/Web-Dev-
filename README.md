@@ -1,212 +1,74 @@
 # Clear Blue Plumbing Website
 
-## Student Information
-
-**Student Name:** Duncan Loza  
-**Student Number:** ST10527661  
-**Module:** WEDE5020W  
-**Module Code:** 5020  
-
----
-
-## Project Overview
-
-This project is a website developed for **Clear Blue Plumbing**, a local plumbing business based in Witpoortjie, Roodepoort, Gauteng.
-
-The purpose of the website is to create an online presence for the business and make it easier for potential customers to find information about the business, view its services, identify the areas it serves, and get in contact with the business.
-
-The website was initially developed as part of Part 1 and was further developed and improved for Part 2. Part 2 focuses on improving the website structure, styling, responsiveness, navigation, usability, and overall presentation.
-
----
-
-## Website Goals and Objectives
-
-The main goals of the Clear Blue Plumbing website are to:
-
-- Provide information about Clear Blue Plumbing.
-- Clearly explain the plumbing services offered.
-- Show the areas served by the business.
-- Provide the business location and contact information.
-- Make it easy for customers to contact the business.
-- Include clear calls to action such as **Request a Quote** and **Call Now**.
-- Keep the website navigation simple and consistent.
-- Create a clear and user-friendly website structure.
-- Ensure that the website content is suitable for residential customers, landlords, property managers, and small businesses.
-- Provide a responsive website that can be viewed on desktop, tablet, and mobile devices.
-
----
-
-## Target Audience
-
-The target audience for the website includes:
-
-- Homeowners
-- Tenants
-- Landlords
-- Property managers
-- Small businesses
-- Customers in Witpoortjie and surrounding areas of Roodepoort
-
-The website is designed to provide these users with quick access to information about the plumbing business, its services, service areas, and contact details.
-
----
-
-## Website Structure
-
-The website consists of seven HTML pages, including a dedicated Request a Quote page and Gallery page added for Part 3.
-
-### 1. Home (`index.html`)
-
-The Home page introduces Clear Blue Plumbing and includes:
-
-- Business introduction
-- Main plumbing service information
-- Reasons customers may choose the business
-- Service preview
-- Service area information
-- Calls to action
-- Contact information
-
-### 2. About (`about.html`)
-
-The About page provides information about:
-
-- Clear Blue Plumbing
-- The business background
-- The business vision
-- The business story
-- Customers the business aims to assist
-- Information about the business
-
-### 3. Services (`services.html`)
-
-The Services page provides information about the plumbing services offered, including:
-
-- General Plumbing Repairs
-- Leak Repairs
-- Blocked Drains
-- Toilet Repairs
-- Tap Repairs
-- Pipe Repairs
-- Plumbing Maintenance
-- Emergency Plumbing Assistance
-
-### 4. Service Areas (`service-areas.html`)
-
-The Service Areas page provides information about the locations served by Clear Blue Plumbing.
-
-The site identifies Witpoortjie and Roodepoort as its primary stated service area. Customers should contact the business to confirm availability for a specific address.
-
-The page also provides the business location:
-
-**13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724**
-
-The Contact and Service Areas pages include responsive Google Maps embeds and links to open the address in Google Maps. The map is address-based; the exact business pin should be verified before public launch.
-
-### 5. Contact (`contact.html`)
-
-The Contact page provides customers with ways to contact Clear Blue Plumbing.
-
-The page includes:
-
-- Business address
-- Telephone contact
-- Request a Quote section
-- Enquiry form
-- Service selection
-- Customer message field
-
-**Business contact number:** 072 426 0645
-
----
-
-## Sitemap
-
-The website structure is:
-
-```text
-Home (index.html)
-├── About (about.html)
-├── Services (services.html)
-├── Service Areas (service-areas.html)
-├── Gallery (gallery.html)
-├── Contact (contact.html)
-└── Request a Quote (enquiry.html)
-```
-
-## Part 3 Development Notes
-
-### SEO and Page Structure
-* Added unique page titles and meta descriptions to the existing pages.
-* Corrected the Service Areas page so its content describes the local service area rather than duplicating the Services page.
-* Corrected the external stylesheet links so each page references the root-level `style.css` file.
-
-### Forms
-* Added `enquiry.html` for service and quote enquiries.
-* Updated `contact.html` to provide a separate general contact form.
-* Added `script.js` for client-side validation and feedback.
-* Added form feedback and keyboard-focus styles to `style.css`.
-
-### Current Form Limitation
-The forms use a third-party FormSubmit AJAX endpoint configured for the recipient email. The recipient must activate the service before live delivery can be confirmed. No live submission or inbox receipt has been verified.
-
-
-
-## Part 3 Interactive Features
-
-### Services Search and Filter
-The Services page includes a client-side search field and category filter. Visitors can search service names and descriptions or filter by service category. JavaScript updates the visible service cards and reports the number of matching results without reloading the page.
-
-The search and filter operate in the browser and do not send visitor information to a server.
-
-
-### Frequently Asked Questions Accordion
-The Services page includes an accessible FAQ accordion using the native HTML `details` and `summary` elements. Visitors can open and close each answer without additional JavaScript. The answers avoid guaranteeing price, availability, or emergency response times.
-
-
-### Asynchronous Form Submission
-Both forms now submit using JavaScript `fetch()` to the FormSubmit AJAX endpoint configured for the business recipient. The browser displays a success or failure message without a page reload. The recipient must activate the service by confirming the provider's verification email before live delivery can be confirmed. Do not treat a successful HTTP response alone as proof that the business received or read a message.
-
-
-### Form Processing and Privacy
-The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoint configured for `info@cblue.co.za`. This sends the form fields to a third-party processor for email delivery. The recipient must activate the service using the provider's verification email. Live delivery has not been tested or confirmed. Before using the site with real customers, verify that the recipient controls this inbox, review the provider's privacy terms, and add an appropriate privacy notice describing how submitted personal information is handled.
-
-
-## Technical SEO and Accessibility Notes
-* All seven HTML pages have one page title, one meta description, and one primary `h1` heading in the repository source.
-* The homepage no longer relies on an external illustrative photograph. The Gallery page contains six individual externally hosted, generic plumbing-related images with descriptive alt text and lazy loading. These are illustrative images, not verified examples of completed business work. Image loading and the no-people requirement still need visual browser verification.
-* Internal navigation links connect the main pages and the quote page. Check every link again after deployment.
-* Added `robots.txt` and `sitemap.xml` for a planned GitHub Pages deployment at `https://duncan-loza.github.io/Web-Dev-/`. The sitemap should include all seven HTML pages, including `gallery.html`. Confirm the published site URL and update both files if the actual deployment URL differs.
-* No search-engine indexing, page-speed score, security audit, or browser-based accessibility test has been performed.
-
-
-## Google Maps and Image Assets
-
-* Added an embedded Google Maps view on the Contact and Service Areas pages using the stated address: 13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724. Visitors can also open the location in Google Maps.
-* The map embed does not require a Google Maps API key. Confirm the correct pin and address before using the site as a live business website.
-* Removed the external illustrative photograph from the homepage because it was not displaying reliably and was not verified work by Clear Blue Plumbing.
-
-
-### Gallery Page
-* Updated `gallery.html` to remove the Facebook embed and display six separate generic plumbing-related photos.
-* Added descriptive alternative text, image dimensions, and lazy loading to each gallery image.
-* Added a note explaining that the photos are illustrative and do not represent verified completed jobs by Clear Blue Plumbing.
-* The images are externally hosted; visual checks for image loading, mobile layout, and the absence of people remain outstanding.
-
-
-### Gallery Page Update
-* Replaced the Facebook embed with six separate generic plumbing-related photos in `gallery.html`.
-* Added descriptive alt text, image dimensions, and lazy loading to each image.
-* Clarified that the images are illustrative, not verified completed jobs by Clear Blue Plumbing.
-* The images are externally hosted; image loading, mobile layout, and the absence of people remain to be checked in a browser.
-
-
-### Latest Gallery Image Change
-* Replaced the final two gallery images with externally hosted photos of a rooftop solar water-heating collector and a wall-mounted exhaust fan. They are illustrative, not verified Clear Blue Plumbing jobs; browser verification remains outstanding.
-
-
-### Form Validation and Mobile Responsiveness
-* Enhanced client-side validation for both the Contact and Request a Quote forms. Validation includes required fields, email format, phone number digit count (7–15), minimum and maximum lengths, selection fields, and rejection of whitespace-only text in key fields.
-* Both forms continue to submit asynchronously and display status feedback. Successful delivery to the business inbox has not been independently verified and depends on the third-party form recipient activating the service.
-* Extended responsive styling for mobile navigation, form controls, touch targets, page spacing, viewport overflow, and embedded maps. Existing tablet and mobile breakpoints remain in place.
-* Responsive behaviour and form validation still require browser testing at desktop, tablet, and mobile viewport sizes.
+## Student and module details
+- **Student:** Duncan Loza
+- **Student number:** ST10527661
+- **Module:** WEDE5020W – Introduction to Web Development
+- **Project:** Clear Blue Plumbing website
+
+## Project overview
+This student website project presents Clear Blue Plumbing as a local plumbing business serving Witpoortjie and Roodepoort, Gauteng. It provides business information, service descriptions, stated service areas, an illustrative gallery, and ways to make contact or request a quote.
+
+**Important:** This is an academic project. It does not verify that the business is operating, that the listed address is correct, or that services are available. The business owner should verify all business details, contact information, imagery and map location before real-world use.
+
+## Website pages
+| Page | Purpose |
+|---|---|
+| `index.html` | Home page and overview |
+| `about.html` | Business information |
+| `services.html` | Service descriptions, search/filter and FAQ accordion |
+| `service-areas.html` | Stated service area and map |
+| `gallery.html` | Illustrative plumbing-related images |
+| `contact.html` | Contact details and general contact form |
+| `enquiry.html` | Service and quote enquiry form |
+
+## Part 3 implementation
+### Functionality
+- Services search and category filter run in the browser using JavaScript and update visible service cards and the result count.
+- The Services page uses native HTML `details`/`summary` elements for an FAQ accordion.
+- The contact and quote forms use HTML constraints and JavaScript checks for required fields, email format, phone-number digit count and meaningful text.
+- Form submissions use asynchronous `fetch()` requests to the FormSubmit AJAX endpoint. The visitor receives an on-page status message without a page reload.
+- The quote form collects the requested service, work location, urgency and optional budget so the business can respond. It does **not** calculate a price or confirm appointment availability automatically.
+- Responsive CSS includes tablet/mobile breakpoints, flexible form controls, map sizing and larger touch targets.
+
+### SEO and technical files
+- Each of the seven HTML pages has its own title and meta description.
+- Pages use descriptive headings, internal navigation and image alternative text.
+- `robots.txt` and `sitemap.xml` are included. Their canonical domain must match the final published domain; the current files use the Netlify project URL recorded for this deployment.
+- The sitemap includes all seven HTML pages.
+- Keyword themes used in page copy include **plumber in Roodepoort**, **plumbing services in Witpoortjie**, **plumbing repairs**, **leak repairs**, **blocked drains**, **toilet repairs** and **tap repairs**. These are on-page keyword choices, not the result of a paid keyword-volume study.
+- Local SEO work includes consistent location wording and a map embed. No Google Business Profile, backlinks, directory citations or social-media campaign is claimed as completed.
+
+## Forms: processing, privacy and limitations
+Both forms submit to the FormSubmit AJAX endpoint configured for `info@cblue.co.za`. The recipient must activate the FormSubmit service, and the address must be confirmed as controlled by the intended recipient. A successful browser response is not proof that a message reached or was read in the inbox. No live delivery test has been confirmed.
+
+Form data is sent to a third-party processor. Before collecting real customer information, verify the recipient and provider terms, provide a suitable privacy notice, and obtain any required consent. Do not submit sensitive payment or identity information through these demonstration forms.
+
+## Images and map
+The Gallery page contains six generic externally hosted images with descriptive alt text, dimensions and lazy loading. They are illustrative only and are not presented as verified Clear Blue Plumbing jobs. Image availability and third-party licensing/attribution should be checked before public commercial use.
+
+The Contact and Service Areas pages embed Google Maps using the address currently written in the project (13 Moller Street, Witpoortjie, Roodepoort). The business owner must confirm that address and map pin; the embed is not proof of the business's location.
+
+## Testing status
+Source-level checks have been made against repository files. The following are **not claimed as completed** unless separately recorded with evidence:
+- End-to-end browser testing of every form and search/filter state.
+- Successful FormSubmit activation and inbox delivery.
+- Verification of all external gallery images and their reuse rights.
+- Confirmation of the correct business address and Google Maps pin.
+- Lighthouse/page-speed measurement, security audit, accessibility audit or live search-engine indexing.
+- Backlink acquisition, social-media promotion or Google Business Profile optimisation.
+
+Before submission, test the deployed site on desktop and mobile, submit test forms only after recipient activation, inspect all links and images, and confirm the published sitemap and robots file.
+
+## References
+- FormSubmit (n.d.) *FormSubmit – Easy form endpoints*. Available at: https://formsubmit.co/ (Accessed: 1 November 2026).
+- Google (n.d.) *Google Maps URLs*. Available at: https://developers.google.com/maps/documentation/urls/get-started (Accessed: 1 November 2026).
+- Google (n.d.) *Search Central – SEO Starter Guide*. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 1 November 2026).
+- MDN Web Docs (n.d.) *Constraint validation*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation (Accessed: 1 November 2026).
+- MDN Web Docs (n.d.) *Fetch API*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API (Accessed: 1 November 2026).
+- W3C (n.d.) *Web Content Accessibility Guidelines (WCAG) 2.2*. Available at: https://www.w3.org/TR/WCAG22/ (Accessed: 1 November 2026).
+- Unsplash (n.d.) *Unsplash*. Available at: https://unsplash.com/ (Accessed: 1 November 2026). Retain the individual source page and licence details for each image used.
+- Wikimedia Commons (n.d.) *Wikimedia Commons*. Available at: https://commons.wikimedia.org/ (Accessed: 1 November 2026). Verify each file page's licence and attribution requirements before reuse.
+
+## Changelog
+See [CHANGELOG.md](CHANGELOG.md) for the development history and corrections.
