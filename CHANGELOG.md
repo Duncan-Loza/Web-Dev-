@@ -411,3 +411,9 @@
 - Student visually checked the Google Maps embeds on both `contact.html` and `service-areas.html` and confirmed that they load and work as expected.
 - Marked the map embed and supplied business-pin update as browser-checked based on the student's confirmation.
 - This confirmation covers map loading and visible functionality only; it does not independently verify Google Business Profile ownership, third-party image permissions, or other outstanding website checks.
+
+## 2026-11-01 — Keyboard-only accessibility testing
+
+- Student completed keyboard-only testing on the deployed website and reported that the tested keyboard interactions work as expected.
+- Recorded the keyboard-testing result in the README as a student-reported browser check.
+- Screen-reader testing and Lighthouse accessibility evidence remain outstanding and are not marked as completed.
