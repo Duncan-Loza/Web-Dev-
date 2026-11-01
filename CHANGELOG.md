@@ -440,3 +440,9 @@
 - Corrected the earlier Windows Narrator entry so it no longer describes Lighthouse evidence as outstanding.
 - The Home page's student-reported desktop and mobile Lighthouse results and original screenshots are now documented in the README.
 - Comprehensive manual accessibility review and all-page Lighthouse testing are not claimed as completed.
+
+
+## 2026-11-01 — Gallery photo description corrected
+- Corrected the Gallery page and README: the student confirms that the six photographs show plumbing jobs completed by Clear Blue Plumbing, not illustrative reference images.
+- Updated the gallery notice, page metadata, structured description, accessible gallery label and project documentation to reflect the student's confirmation.
+- Retained the Google Business Profile source note. Individual photo uploader identities and reuse permissions have not been independently verified.
