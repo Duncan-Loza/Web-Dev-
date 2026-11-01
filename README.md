@@ -96,3 +96,5 @@ Before submission, test the deployed site on desktop and mobile, submit test for
 
 ## Changelog
 See [CHANGELOG.md](CHANGELOG.md) for the development history and corrections.
+
+- Added page-specific `meta keywords` tags to all seven HTML pages to document the keyword themes used for the Part 3 rubric. These tags are included for the assessment requirement; Google Search does not use the meta keywords tag as a ranking signal.
