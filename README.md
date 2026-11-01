@@ -84,6 +84,7 @@ Before submission, test the deployed site on desktop and mobile, submit test for
 ## References
 - FormSubmit (n.d.) *FormSubmit – Easy form endpoints*. Available at: https://formsubmit.co/ (Accessed: 1 November 2026).
 - Google (n.d.) *Google Maps – CLEAR BLUE PLUMBING, 13 Moller St, Witpoortjie, Roodepoort, 1724*. Available at: https://www.google.com/maps/dir//CLEAR+BLUE+PLUMBING,+13+Moller+St,+Witpoortjie,+Roodepoort,+1724/@-26.1492117,27.7902418,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1e95993c3a245d3d:0xa8b3767eda2d1f4e!2m2!1d27.831254!2d-26.1347313?entry=ttu (Accessed: 1 November 2026).
+- Google (n.d.) *Google Maps – CLEAR BLUE PLUMBING, 13 Moller St, Witpoortjie, Roodepoort, 1724*. Available at: https://www.google.com/maps?q=-26.1347313%2C27.831254 (Accessed: 1 November 2026).
 - Google (n.d.) *Google Maps URLs*. Available at: https://developers.google.com/maps/documentation/urls/get-started (Accessed: 1 November 2026).
 - Google (n.d.) *Search Central – SEO Starter Guide*. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 1 November 2026).
 - Schema.org (n.d.) *WebPage*. Available at: https://schema.org/WebPage (Accessed: 1 November 2026).
