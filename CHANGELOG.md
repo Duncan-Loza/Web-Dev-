@@ -278,3 +278,11 @@
 * Documented that gallery images are generic illustrative assets, not verified business work, and that image licensing/attribution must be checked.
 * Documented the unverified business address/map pin and outstanding browser, performance, security, accessibility and indexing checks.
 * Added references for the technical guidance and third-party services documented in the README.
+
+## Part 3 — Uploaded Gallery Assets Connected (1 November 2026)
+
+* Added six WebP gallery image assets to the repository root: `gallery-1.webp` through `gallery-6.webp`.
+* Updated the image paths in `gallery.html` from `images/gallery/gallery-*.webp` to the matching root-level filenames so the references match the uploaded repository structure.
+* Verified through the GitHub repository contents listing that all six referenced image files are present.
+* Updated the README to document the local image files and their paths accurately.
+* The images remain illustrative and are not represented as verified completed work by Clear Blue Plumbing. Their appearance, loading on the deployed site, source permissions and attribution requirements should still be checked.
