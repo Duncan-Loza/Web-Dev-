@@ -9,7 +9,7 @@
 ## Project overview
 This student website project presents Clear Blue Plumbing as a local plumbing business serving Witpoortjie and Roodepoort, Gauteng. It provides business information, service descriptions, stated service areas, an illustrative gallery, and ways to make contact or request a quote.
 
-**Important:** This is an academic project. The address shown (13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724) has been confirmed by the student against the Clear Blue Plumbing Google Business Profile. This does not independently verify that the business is operating or that services are available. The exact Google Maps place pin still needs to be linked and checked before real-world use.
+**Important:** This is an academic project. The address shown (13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724) and the Google Maps pin coordinates were supplied/checked by the student against the Clear Blue Plumbing Google Business Profile. This does not independently verify that the business is operating or that services are available.
 
 ## Published website
 - **Hosting platform:** GitHub Pages, publishing the `main` branch from the repository root.
@@ -67,17 +67,27 @@ Form data is sent to a third-party processor. Before collecting real customer in
 ## Images and map
 The Gallery page uses six locally stored WebP files with descriptive filenames: `brass-outdoor-water-tap.webp`, `electric-geyser-copper-pipework.webp`, `solar-geyser-evacuated-tube-collector.webp`, `copper-water-pipes-renovation.webp`, `tiled-bathroom-shower-area.webp` and `clear-blue-plumbing-service-advert.webp`. Each image has concise, descriptive alternative text, intrinsic dimensions and lazy loading. The names and alt text describe the visible subject; they do not claim that the images show completed jobs by Clear Blue Plumbing. The student states that these six images were obtained from the Clear Blue Plumbing Google Business Profile. They are credited to that profile below; the individual photo uploaders and reuse permissions have not been independently verified. Confirm permission and any attribution requirements before public commercial use.
 
-The Contact and Service Areas pages embed Google Maps at the business pin supplied in the Clear Blue Plumbing Google Maps directions link. The profile identifies the business as CLEAR BLUE PLUMBING, 13 Moller St, Witpoortjie, Roodepoort, 1724. The map embed is centred on the supplied pin coordinates (latitude -26.1347313, longitude 27.831254); the external map link opens the supplied Google Maps business listing/directions URL.
+The Contact and Service Areas pages embed Google Maps centred on the business pin supplied in the Clear Blue Plumbing Google Maps directions link. The profile identifies the business as CLEAR BLUE PLUMBING, 13 Moller St, Witpoortjie, Roodepoort, 1724. The map embed uses the supplied pin coordinates (latitude -26.1347313, longitude 27.831254). The student visually checked both map embeds on the deployed website and reported that they load and work as expected.
 
 ## Testing status
-Source-level checks have been made against repository files. The student has also reported browser testing of all seven deployed pages, navigation, Services search/filter and JSON fallback, gallery lightbox controls, both forms' validation, responsive layouts, and Chrome/Firefox. The student has now completed keyboard-only testing and reports that keyboard navigation and the tested interactive controls work as expected. The student has also tested the website using Windows Narrator and reports that the screen reader worked as expected during the test. These are student-reported checks; no independent browser recording or test report is included in the repository. The following are **not claimed as completed**:
+Source-level checks have been made against repository files. The student has also reported browser testing of all seven deployed pages, navigation, Services search/filter and JSON fallback, gallery lightbox controls, both forms' validation, responsive layouts, and Chrome/Firefox. The student has now completed keyboard-only testing and reports that keyboard navigation and the tested interactive controls work as expected. The student has also tested the website using Windows Narrator and reports that the screen reader worked as expected during the test. On 1 November 2026, the student ran Google Chrome Lighthouse on the Home page and saved the desktop and mobile score screenshots in the repository root. The reported desktop scores were Performance 98, Accessibility 100, Best Practices 100 and SEO 100; the reported mobile scores were Performance 99, Accessibility 100, Best Practices 100 and SEO 100. The screenshots are linked below. These are student-reported test results; Lighthouse scores can vary between runs and automated accessibility checks do not establish full WCAG conformance. No independent browser recording or test report is included in the repository. The following are **not claimed as completed**:
 - A comprehensive screen-reader review of every page and interactive state, including all form validation messages and the full lightbox interaction.
-- Lighthouse measurements for mobile/desktop performance, accessibility, best practices and SEO, with screenshots or exported reports retained as evidence.
 - Successful FormSubmit activation and inbox delivery.
 - Confirmation of the gallery image source and any reuse/attribution requirements. The student identifies the six images as sourced from the Clear Blue Plumbing Google Business Profile; this source has not been independently checked in this environment.
-- Verification that the embedded map opens the exact Google Business Profile pin. The displayed street address has been checked by the student against the profile, but the current embed still uses an address search.
-- Lighthouse/page-speed measurement, security audit, accessibility audit or live search-engine indexing.
+- A comprehensive manual accessibility audit against WCAG, a security audit, or live search-engine indexing verification.
 - Backlink acquisition, social-media promotion or Google Business Profile optimisation.
+
+### Lighthouse screenshots — Home page (1 November 2026)
+
+**Desktop:** Performance 98 · Accessibility 100 · Best Practices 100 · SEO 100
+
+![Desktop Lighthouse results](Screenshot%202026-11-01%20163541.png)
+
+**Mobile:** Performance 99 · Accessibility 100 · Best Practices 100 · SEO 100
+
+![Mobile Lighthouse results](Screenshot%202026-11-01%20163628.png)
+
+The two original PNG screenshots are stored in the repository root. The filenames are retained as uploaded so the README links point directly to the original evidence.
 
 Before submission, test the deployed site on desktop and mobile, submit test forms only after recipient activation, inspect all links and images, and confirm the published sitemap and robots file.
 
