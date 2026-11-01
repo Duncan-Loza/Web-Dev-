@@ -67,7 +67,7 @@ Form data is sent to a third-party processor. Before collecting real customer in
 ## Images and map
 The Gallery page uses six locally stored WebP files with descriptive filenames: `brass-outdoor-water-tap.webp`, `electric-geyser-copper-pipework.webp`, `solar-geyser-evacuated-tube-collector.webp`, `copper-water-pipes-renovation.webp`, `tiled-bathroom-shower-area.webp` and `clear-blue-plumbing-service-advert.webp`. Each image has concise, descriptive alternative text, intrinsic dimensions and lazy loading. The names and alt text describe the visible subject; they do not claim that the images show completed jobs by Clear Blue Plumbing. The student states that these six images were obtained from the Clear Blue Plumbing Google Business Profile. They are credited to that profile below; the individual photo uploaders and reuse permissions have not been independently verified. Confirm permission and any attribution requirements before public commercial use.
 
-The Contact and Service Areas pages currently embed Google Maps using the confirmed profile address (13 Moller Street, Witpoortjie, Roodepoort). The student reports that this address matches the Clear Blue Plumbing Google Business Profile. The current embed is still an address-based map search rather than a verified place-specific Google Maps pin; the exact profile share URL is needed to link the map to that business listing.
+The Contact and Service Areas pages embed Google Maps at the business pin supplied in the Clear Blue Plumbing Google Maps directions link. The profile identifies the business as CLEAR BLUE PLUMBING, 13 Moller St, Witpoortjie, Roodepoort, 1724. The map embed is centred on the supplied pin coordinates (latitude -26.1347313, longitude 27.831254); the external map link opens the supplied Google Maps business listing/directions URL.
 
 ## Testing status
 Source-level checks have been made against repository files. The student has also reported browser testing of all seven deployed pages, navigation, Services search/filter and JSON fallback, gallery lightbox controls, both forms' validation, responsive layouts, and Chrome/Firefox. These are student-reported checks; no independent browser recording or test report is included in the repository. The following are **not claimed as completed**:
@@ -83,6 +83,7 @@ Before submission, test the deployed site on desktop and mobile, submit test for
 
 ## References
 - FormSubmit (n.d.) *FormSubmit – Easy form endpoints*. Available at: https://formsubmit.co/ (Accessed: 1 November 2026).
+- Google (n.d.) *Google Maps – CLEAR BLUE PLUMBING, 13 Moller St, Witpoortjie, Roodepoort, 1724*. Available at: https://www.google.com/maps/dir//CLEAR+BLUE+PLUMBING,+13+Moller+St,+Witpoortjie,+Roodepoort,+1724/@-26.1492117,27.7902418,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1e95993c3a245d3d:0xa8b3767eda2d1f4e!2m2!1d27.831254!2d-26.1347313?entry=ttu (Accessed: 1 November 2026).
 - Google (n.d.) *Google Maps URLs*. Available at: https://developers.google.com/maps/documentation/urls/get-started (Accessed: 1 November 2026).
 - Google (n.d.) *Search Central – SEO Starter Guide*. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 1 November 2026).
 - Schema.org (n.d.) *WebPage*. Available at: https://schema.org/WebPage (Accessed: 1 November 2026).
