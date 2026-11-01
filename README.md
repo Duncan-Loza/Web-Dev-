@@ -24,7 +24,9 @@ This student website project presents Clear Blue Plumbing as a local plumbing bu
 
 ## Part 3 implementation
 ### Functionality
-- Services search and category filter run in the browser using JavaScript and update visible service cards and the result count.
+- Services search and category filter run in the browser using JavaScript and update visible service cards and the result count. A clear-filters control resets both controls, and a no-results message appears when no cards match.
+- The Gallery page includes a native HTML dialog lightbox with previous/next controls, Escape-to-close support, arrow-key navigation, descriptive alternative text, and focus return to the selected thumbnail.
+- Each page includes a keyboard skip link to the main content. Canonical URLs and Open Graph/Twitter preview metadata are included for the current Netlify project domain.
 - The Services page uses native HTML `details`/`summary` elements for an FAQ accordion.
 - The contact and quote forms use HTML constraints and JavaScript checks for required fields, email format, phone-number digit count and meaningful text.
 - Form submissions use asynchronous `fetch()` requests to the FormSubmit AJAX endpoint. The visitor receives an on-page status message without a page reload.
@@ -37,6 +39,8 @@ This student website project presents Clear Blue Plumbing as a local plumbing bu
 - `robots.txt` and `sitemap.xml` are included. Their canonical domain must match the final published domain; the current files use the Netlify project URL recorded for this deployment.
 - The sitemap includes all seven HTML pages.
 - Keyword themes used in page copy include **plumber in Roodepoort**, **plumbing services in Witpoortjie**, **plumbing repairs**, **leak repairs**, **blocked drains**, **toilet repairs** and **tap repairs**. These are on-page keyword choices, not the result of a paid keyword-volume study.
+- Search-intent mapping: the Home page targets the broad local plumber query; Services targets service-specific searches; Service Areas targets location coverage; Contact and Enquiry support high-intent contact/quote searches; Gallery supports image discovery but is not a substitute for genuine project evidence.
+- Off-page SEO is not claimed as completed. Future work should only use verified business details to create or maintain a Google Business Profile, request genuine customer reviews, and earn relevant local directory citations or links. Do not create fake reviews or listings.
 - Local SEO work includes consistent location wording and a map embed. No Google Business Profile, backlinks, directory citations or social-media campaign is claimed as completed.
 
 ## Forms: processing, privacy and limitations
@@ -51,7 +55,10 @@ The Contact and Service Areas pages embed Google Maps using the address currentl
 
 ## Testing status
 Source-level checks have been made against repository files. The following are **not claimed as completed** unless separately recorded with evidence:
-- End-to-end browser testing of every form and search/filter state.
+- End-to-end browser testing of every form, gallery lightbox, and search/filter state.
+- Keyboard-only testing of the skip link, navigation, lightbox, FAQ controls and forms.
+- Lighthouse measurements for mobile/desktop performance, accessibility, best practices and SEO, with screenshots or exported reports retained as evidence.
+- Cross-browser checks (at minimum Chrome and Firefox) and responsive checks at phone, tablet and desktop widths.
 - Successful FormSubmit activation and inbox delivery.
 - Verification of all external gallery images and their reuse rights.
 - Confirmation of the correct business address and Google Maps pin.
