@@ -5,31 +5,80 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!form || !feedback) return;
 
     const phone = form.querySelector('input[type="tel"]');
-    if (phone) {
-      phone.addEventListener("input", function () {
-        const digits = phone.value.replace(/\D/g, "");
-        phone.setCustomValidity(
-          digits.length >= 7 && digits.length <= 15
-            ? ""
-            : "Enter a valid phone number with 7 to 15 digits."
+    const name = form.querySelector('input[name="name"]');
+    const email = form.querySelector('input[type="email"]');
+    const message = form.querySelector('textarea[name="message"]');
+    const location = form.querySelector('input[name="location"]');
+
+    // Trim whitespace-only values and validate phone numbers consistently.
+    function validateTextField(field, messageText) {
+      if (!field) return;
+      field.addEventListener("input", function () {
+        field.setCustomValidity(
+          field.value.trim().length > 0 ? "" : messageText
         );
+      });
+      field.addEventListener("blur", function () {
+        if (field.value.trim().length === 0) {
+          field.setCustomValidity(messageText);
+        }
+      });
+    }
+
+    validateTextField(name, "Please enter your full name.");
+    validateTextField(message, "Please describe your enquiry using at least 10 characters.");
+    validateTextField(location, "Please enter the suburb or area where the work is needed.");
+
+    if (phone) {
+      function validatePhone() {
+        const digits = phone.value.replace(/\\D/g, "");
+        const valid = digits.length >= 7 && digits.length <= 15;
+        phone.setCustomValidity(
+          valid ? "" : "Enter a valid phone number containing 7 to 15 digits."
+        );
+      }
+      phone.addEventListener("input", validatePhone);
+      phone.addEventListener("blur", validatePhone);
+    }
+
+    if (email) {
+      email.addEventListener("input", function () {
+        email.setCustomValidity("");
       });
     }
 
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
 
+      // Native HTML validation checks required fields, email format,
+      // selection fields, and the minlength/maxlength/pattern attributes.
       if (!form.checkValidity()) {
         form.reportValidity();
+        return;
+      }
+
+      // Prevent whitespace-only text from passing browser length checks.
+      const textFields = [name, message, location].filter(Boolean);
+      const blankField = textFields.find(function (field) {
+        return field.value.trim().length === 0;
+      });
+      if (blankField) {
+        blankField.setCustomValidity("Please complete this field with meaningful information.");
+        blankField.reportValidity();
         return;
       }
 
       const submitButton = form.querySelector('button[type="submit"]');
       const originalButtonText = submitButton ? submitButton.textContent : "";
       const data = new FormData(form);
-      const emailInput = form.querySelector('input[type="email"]');
       const replyTo = form.querySelector('input[name="_replyto"]');
-      if (replyTo && emailInput) replyTo.value = emailInput.value.trim();
+      if (replyTo && email) replyTo.value = email.value.trim();
+
+      // Send trimmed text values to the form processor.
+      textFields.forEach(function (field) {
+        data.set(field.name, field.value.trim());
+      });
+      if (email) data.set(email.name, email.value.trim());
 
       if (submitButton) {
         submitButton.disabled = true;
@@ -52,11 +101,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (formType === "enquiry") {
-          feedback.textContent = "Thank you, " + String(data.get("name") || "") + ". Your quote enquiry was submitted to the form-processing service. The business must confirm price, appointment timing, and service availability. If the service has not yet been activated by the recipient, delivery may not complete.";
+          feedback.textContent = "Thank you, " + String(data.get("name") || "") + ". Your quote enquiry was submitted to the form-processing service. The business must confirm price, appointment timing, and service availability. If the recipient has not activated the service, delivery may not complete.";
         } else {
-          feedback.textContent = "Thank you. Your contact message was submitted to the form-processing service. The business will need to respond separately. If the service has not yet been activated by the recipient, delivery may not complete.";
+          feedback.textContent = "Thank you. Your contact message was submitted to the form-processing service. The business will need to respond separately. If the recipient has not activated the service, delivery may not complete.";
         }
         form.reset();
+        form.querySelectorAll("input, textarea, select").forEach(function (field) {
+          field.setCustomValidity("");
+        });
       } catch (error) {
         feedback.textContent = "We could not confirm submission. Check your internet connection and try again, or call 072 426 0645. Do not assume your message was sent.";
       } finally {
