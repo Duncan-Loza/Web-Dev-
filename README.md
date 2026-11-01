@@ -203,3 +203,10 @@ The quote and contact forms submit asynchronously to the FormSubmit AJAX endpoin
 
 ### Latest Gallery Image Change
 * Replaced the final two gallery images with externally hosted photos of a rooftop solar water-heating collector and a wall-mounted exhaust fan. They are illustrative, not verified Clear Blue Plumbing jobs; browser verification remains outstanding.
+
+
+### Form Validation and Mobile Responsiveness
+* Enhanced client-side validation for both the Contact and Request a Quote forms. Validation includes required fields, email format, phone number digit count (7–15), minimum and maximum lengths, selection fields, and rejection of whitespace-only text in key fields.
+* Both forms continue to submit asynchronously and display status feedback. Successful delivery to the business inbox has not been independently verified and depends on the third-party form recipient activating the service.
+* Extended responsive styling for mobile navigation, form controls, touch targets, page spacing, viewport overflow, and embedded maps. Existing tablet and mobile breakpoints remain in place.
+* Responsive behaviour and form validation still require browser testing at desktop, tablet, and mobile viewport sizes.
