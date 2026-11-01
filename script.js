@@ -1,4 +1,6 @@
+// Run page interactions after the HTML elements have loaded.
 document.addEventListener("DOMContentLoaded", function () {
+  // Add consistent validation and submission feedback to each website form.
   function setupForm(formId, feedbackId, formType) {
     const form = document.getElementById(formId);
     const feedback = document.getElementById(feedbackId);
@@ -11,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const location = form.querySelector('input[name="location"]');
 
     // Trim whitespace-only values and validate phone numbers consistently.
+    // Reject text fields that contain only spaces or are shorter than required.
     function validateTextField(field, messageText) {
       if (!field) return;
       field.addEventListener("input", function () {
@@ -30,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     validateTextField(location, "Please enter the suburb or area where the work is needed.");
 
     if (phone) {
+      // Count digits only so spaces, brackets and + signs do not affect validation.
       function validatePhone() {
         const digits = phone.value.replace(/\D/g, "");
         const valid = digits.length >= 7 && digits.length <= 15;
@@ -47,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
+    // Stop the normal page reload and submit the form asynchronously.
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
 
@@ -127,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setupForm("enquiry-form", "enquiry-feedback", "enquiry");
   setupForm("contact-form", "contact-feedback", "contact");
 
-  const serviceSearch = document.getElementById("service-search");
+  // Set up keyword search and category filtering on the Services page.\n  const serviceSearch = document.getElementById("service-search");
   const serviceCategory = document.getElementById("service-category");
   const serviceList = document.getElementById("service-list");
   const serviceResults = document.getElementById("service-results");
@@ -135,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (serviceSearch && serviceCategory && serviceList && serviceResults) {
     let serviceCards = Array.from(serviceList.querySelectorAll("article"));
 
-    function filterServices() {
+    // Show only service cards that match both the search and selected category.\n    function filterServices() {
       const query = serviceSearch.value.trim().toLowerCase();
       const category = serviceCategory.value;
       let visibleCount = 0;
@@ -162,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Load the service catalogue from a local JSON file. The HTML cards
     // remain available as a fallback if the request fails.
-    fetch("services.json")
+    // Load service data from JSON; the existing HTML remains as a fallback.\n    fetch("services.json")
       .then(function (response) {
         if (!response.ok) throw new Error("Service data could not be loaded.");
         return response.json();
@@ -215,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Accessible gallery lightbox. The native dialog supports Escape to close.
-  const galleryDialog = document.getElementById("gallery-dialog");
+  // Set up the accessible gallery lightbox where the dialog exists.\n  const galleryDialog = document.getElementById("gallery-dialog");
   const galleryImage = document.getElementById("gallery-dialog-image");
   const galleryCaption = document.getElementById("gallery-dialog-caption");
   if (galleryDialog && galleryImage && galleryCaption) {
@@ -226,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let activeImageIndex = 0;
     let lastTrigger = null;
 
-    function showGalleryImage(index) {
+    // Update the enlarged image, caption and active gallery index.\n    function showGalleryImage(index) {
       activeImageIndex = (index + galleryButtons.length) % galleryButtons.length;
       const trigger = galleryButtons[activeImageIndex];
       const image = trigger.querySelector("img");
