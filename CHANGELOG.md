@@ -417,3 +417,9 @@
 - Student completed keyboard-only testing on the deployed website and reported that the tested keyboard interactions work as expected.
 - Recorded the keyboard-testing result in the README as a student-reported browser check.
 - Screen-reader testing and Lighthouse accessibility evidence remain outstanding and are not marked as completed.
+
+## 2026-11-01 — Windows Narrator screen-reader check
+
+- Student tested the website using Windows Narrator and reported that the screen reader worked as expected during the test.
+- Updated the README to record this as a student-reported screen-reader check.
+- A comprehensive review of every page and interactive state, and Lighthouse accessibility audit evidence, remain outstanding.
