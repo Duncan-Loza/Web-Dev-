@@ -423,3 +423,13 @@
 - Student tested the website using Windows Narrator and reported that the screen reader worked as expected during the test.
 - Updated the README to record this as a student-reported screen-reader check.
 - A comprehensive review of every page and interactive state, and Lighthouse accessibility audit evidence, remain outstanding.
+
+
+## 2026-11-01 — Lighthouse testing evidence recorded
+
+- Student ran Google Chrome Lighthouse on the Home page and uploaded two original PNG screenshots to the repository root: `Screenshot 2026-11-01 163541.png` and `Screenshot 2026-11-01 163628.png`.
+- Recorded the reported desktop scores in the README: Performance 98, Accessibility 100, Best Practices 100 and SEO 100.
+- Recorded the reported mobile scores in the README: Performance 99, Accessibility 100, Best Practices 100 and SEO 100.
+- Embedded both screenshots in the README using relative links to the original uploaded filenames; no image files were altered or renamed.
+- Updated the testing status to remove the earlier statement that Lighthouse evidence was outstanding.
+- Lighthouse scores are student-reported and may vary between runs. Automated Lighthouse accessibility checks do not replace a comprehensive manual WCAG review.
