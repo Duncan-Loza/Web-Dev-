@@ -554,3 +554,131 @@ a:focus-visible {
     transition: none;
   }
 }
+
+
+/* PART 3 — MOBILE FORM AND LAYOUT REFINEMENTS */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+select {
+  min-width: 0;
+}
+
+.map-frame {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  header {
+    position: static;
+  }
+
+  header > div {
+    width: 100%;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    width: 100%;
+    padding: 0 0.75rem;
+  }
+
+  main > section,
+  main > section:first-child {
+    padding: 1.25rem 1rem;
+    margin: 0.85rem 0;
+    border-radius: 0.5rem;
+  }
+
+  header {
+    padding: 0.85rem 0.75rem;
+  }
+
+  header > div {
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+
+  header > div > a {
+    text-align: center;
+    white-space: normal;
+  }
+
+  header nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem;
+  }
+
+  header nav li {
+    min-width: 0;
+  }
+
+  header nav a {
+    display: block;
+    height: 100%;
+    padding: 0.55rem 0.35rem;
+    overflow-wrap: anywhere;
+    font-size: 0.92rem;
+  }
+
+  form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  form p {
+    margin-bottom: 1rem;
+  }
+
+  input,
+  textarea,
+  select {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    font-size: 16px;
+  }
+
+  textarea {
+    min-height: 130px;
+  }
+
+  form button,
+  button {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .map-frame iframe {
+    height: 300px;
+  }
+
+  footer {
+    gap: 1.25rem;
+  }
+}
