@@ -24,7 +24,7 @@ This student website project presents Clear Blue Plumbing as a local plumbing bu
 
 ## Part 3 implementation
 ### Functionality
-- Services search and category filter run in the browser using JavaScript and update visible service cards and the result count. A clear-filters control resets both controls, and a no-results message appears when no cards match.
+- The Services page loads its eight service records asynchronously from `services.json` using the Fetch API, builds the service cards with JavaScript, and retains semantic HTML cards as a fallback if the data request fails. Search and category filtering update the visible cards and result count; a clear-filters control resets both controls, and a no-results message appears when no cards match.
 - The Gallery page includes a native HTML dialog lightbox with previous/next controls, Escape-to-close support, arrow-key navigation, descriptive alternative text, and focus return to the selected thumbnail.
 - Each page includes a keyboard skip link to the main content. Canonical URLs and Open Graph/Twitter preview metadata are included for the current Netlify project domain.
 - The Services page uses native HTML `details`/`summary` elements for an FAQ accordion.
@@ -55,7 +55,7 @@ The Contact and Service Areas pages embed Google Maps using the address currentl
 
 ## Testing status
 Source-level checks have been made against repository files. The following are **not claimed as completed** unless separately recorded with evidence:
-- End-to-end browser testing of every form, gallery lightbox, and search/filter state.
+- End-to-end browser testing of every form, gallery lightbox, service JSON loading/fallback, and search/filter state.
 - Keyboard-only testing of the skip link, navigation, lightbox, FAQ controls and forms.
 - Lighthouse measurements for mobile/desktop performance, accessibility, best practices and SEO, with screenshots or exported reports retained as evidence.
 - Cross-browser checks (at minimum Chrome and Firefox) and responsive checks at phone, tablet and desktop widths.
