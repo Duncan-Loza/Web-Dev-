@@ -386,3 +386,12 @@
 - Refined the image alternative text to describe each image's visible subject in natural language without keyword stuffing or implying that illustrative images are verified completed customer jobs.
 - Preserved the existing image dimensions, lazy loading, gallery buttons and lightbox behaviour.
 - Updated the README image inventory. Browser loading and assistive-technology checks should still be completed on the deployed site.
+
+
+## 2026-11-01 — Google Business Profile source and address confirmation
+
+- Updated the README to record that the student sourced the six gallery photographs from the Clear Blue Plumbing Google Business Profile.
+- Replaced the generic Unsplash and Wikimedia Commons reference entries with a Google Business Profile photo reference. Individual uploaders and reuse permissions are not independently verified; permission should be confirmed before commercial use.
+- Recorded the student's confirmation that the profile displays 13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724.
+- Clarified that both map embeds still use an address-based Google Maps search, not a verified business-place pin. The exact Google Maps profile URL is still required before changing the embeds to the business listing itself.
+- Updated the README testing notes to reflect the browser and cross-browser checks reported by the student, while keeping keyboard/screen-reader testing, Lighthouse evidence and live form delivery as outstanding.
