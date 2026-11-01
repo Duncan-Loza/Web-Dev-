@@ -310,3 +310,12 @@
 * Added canonical URL, Open Graph title/description/site-name/URL and Twitter summary-card metadata for the current Netlify project URL.
 * Added visible focus treatment, disabled-submit feedback and a stronger reduced-motion override in the stylesheet.
 * Canonical URLs and social preview URLs must be updated if the Netlify project domain is renamed. Keyboard, screen-reader, browser and social-preview testing remain outstanding.
+
+
+## Part 3 — Asynchronous Service Catalogue (1 November 2026)
+
+* Added services.json containing the eight service records and their category labels.
+* Updated the Services page JavaScript to retrieve the local JSON file with the Fetch API and build service cards using DOM methods and textContent.
+* Retained the existing semantic HTML cards as a fallback if the JSON request fails or contains no valid records.
+* Connected the loaded cards to the existing text search, category filter, clear-filters control and no-results message.
+* Source files and the JSON data structure have been checked in GitHub. The deployed fetch request and fallback behaviour still require browser testing.
