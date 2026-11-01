@@ -286,3 +286,27 @@
 * Verified through the GitHub repository contents listing that all six referenced image files are present.
 * Updated the README to document the local image files and their paths accurately.
 * The images remain illustrative and are not represented as verified completed work by Clear Blue Plumbing. Their appearance, loading on the deployed site, source permissions and attribution requirements should still be checked.
+
+
+## Part 3 — Gallery Interaction, Accessibility and SEO Metadata (1 November 2026)
+
+### Gallery lightbox
+* Added buttons around all six gallery images so each image can be opened in a native HTML dialog.
+* Added previous/next controls, Escape-to-close support through the native dialog, left/right arrow-key navigation, a live image caption, and focus return to the image that opened the dialog.
+* Added responsive dialog styling and visible keyboard focus states.
+* Source-level check confirms that all six gallery thumbnails have lightbox buttons. Actual browser interaction and screen-reader testing remain outstanding.
+
+### Services search improvements
+* Added a Clear Filters button to reset the search text and category selector.
+* Added an empty-results message when no service cards match the current search and category.
+* Kept the service cards in the HTML and used JavaScript to update their visibility and result status without a page reload.
+
+### Form handling correction
+* Corrected the reply-to value so the visitor's email address is also written into the FormData payload sent to the AJAX processor.
+* The form processor's activation and actual inbox delivery are still unverified.
+
+### Accessibility and search preview metadata
+* Added a keyboard skip link to the main content on all seven pages and a matching main-content target.
+* Added canonical URL, Open Graph title/description/site-name/URL and Twitter summary-card metadata for the current Netlify project URL.
+* Added visible focus treatment, disabled-submit feedback and a stronger reduced-motion override in the stylesheet.
+* Canonical URLs and social preview URLs must be updated if the Netlify project domain is renamed. Keyboard, screen-reader, browser and social-preview testing remain outstanding.
