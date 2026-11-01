@@ -339,3 +339,10 @@
 - Refined the navigation bar and added an active-page indicator to each page's navigation link.
 - Added subtle, consistent panel borders, card depth, hover feedback and footer detailing while retaining the existing colour palette and simple student-project structure.
 - Source-level verification confirmed that all seven pages contain a page banner and exactly one active navigation marker. Visual browser testing remains outstanding.
+
+## 2026-11-01 — Banner spacing correction
+
+- Corrected vertical rhythm across all page banners with consistent gaps between headings, descriptions and supporting content.
+- Grouped the home-page calls to action into a responsive action row.
+- Reworked the gallery disclaimer into a clearly labelled, restrained note panel so it reads as supporting information rather than a second unformatted paragraph.
+- Added mobile-specific spacing and stacked action links for smaller screens.
