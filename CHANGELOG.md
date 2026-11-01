@@ -405,3 +405,9 @@
 - Retained the confirmed 13 Moller Street address throughout the website.
 - Updated the README with the business listing source, pin coordinates and Google Maps reference.
 - Repository source was updated; check both map embeds visually on the deployed website to confirm the marker and map load correctly.
+
+## 2026-11-01 — Google Maps embed browser check
+
+- Student visually checked the Google Maps embeds on both `contact.html` and `service-areas.html` and confirmed that they load and work as expected.
+- Marked the map embed and supplied business-pin update as browser-checked based on the student's confirmation.
+- This confirmation covers map loading and visible functionality only; it does not independently verify Google Business Profile ownership, third-party image permissions, or other outstanding website checks.
