@@ -346,3 +346,12 @@
 - Grouped the home-page calls to action into a responsive action row.
 - Reworked the gallery disclaimer into a clearly labelled, restrained note panel so it reads as supporting information rather than a second unformatted paragraph.
 - Added mobile-specific spacing and stacked action links for smaller screens.
+
+
+## Part 3 — Hosting migration to GitHub Pages
+
+* Changed the canonical URL and Open Graph URL on all seven HTML pages from the previous Netlify project domain to the GitHub Pages project URL: https://duncan-loza.github.io/Web-Dev-/.
+* Updated all seven sitemap locations and the sitemap directive in `robots.txt` to the GitHub Pages domain.
+* Updated the README hosting details, published URL, sitemap URL and crawler-file URL to identify GitHub Pages as the deployment platform.
+* Retained earlier Netlify references in this changelog only where they describe historical development decisions; they are not current deployment instructions.
+* Source files were updated in the `main` branch. The GitHub Pages build and live URLs still need to be checked in a browser after GitHub finishes publishing.
