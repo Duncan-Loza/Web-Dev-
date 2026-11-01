@@ -45,7 +45,7 @@ Both forms submit to the FormSubmit AJAX endpoint configured for `info@cblue.co.
 Form data is sent to a third-party processor. Before collecting real customer information, verify the recipient and provider terms, provide a suitable privacy notice, and obtain any required consent. Do not submit sensitive payment or identity information through these demonstration forms.
 
 ## Images and map
-The Gallery page contains six generic externally hosted images with descriptive alt text, dimensions and lazy loading. They are illustrative only and are not presented as verified Clear Blue Plumbing jobs. Image availability and third-party licensing/attribution should be checked before public commercial use.
+The Gallery page uses six WebP image files stored in the repository root: `gallery-1.webp` through `gallery-6.webp`. The image references in `gallery.html` point directly to these local files. Each image has descriptive alt text, intrinsic dimensions and lazy loading. The images are illustrative only and are not presented as verified Clear Blue Plumbing jobs. Confirm the source, permission and any attribution requirements for each image before public commercial use.
 
 The Contact and Service Areas pages embed Google Maps using the address currently written in the project (13 Moller Street, Witpoortjie, Roodepoort). The business owner must confirm that address and map pin; the embed is not proof of the business's location.
 
