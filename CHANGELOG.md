@@ -379,3 +379,10 @@
 - Added a distinct `meta name="keywords"` tag to each of the seven HTML pages, using relevant plumbing services, locations and page topics.
 - Avoided using one identical keyword list across every page; keywords reflect each page's purpose.
 - Included the tags to address the WEDE5020W Part 3 marking criterion. The tags are not represented as a Google ranking factor.
+
+## 2026-11-01 — Descriptive gallery image filenames and alternative text
+- Renamed the six generic `gallery-*.webp` assets to descriptive filenames based on the subjects already identified in the gallery.
+- Updated all six image paths in `gallery.html` so the renamed local assets continue to load.
+- Refined the image alternative text to describe each image's visible subject in natural language without keyword stuffing or implying that illustrative images are verified completed customer jobs.
+- Preserved the existing image dimensions, lazy loading, gallery buttons and lightbox behaviour.
+- Updated the README image inventory. Browser loading and assistive-technology checks should still be completed on the deployed site.
