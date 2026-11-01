@@ -87,6 +87,7 @@ Before submission, test the deployed site on desktop and mobile, submit test for
 - FormSubmit (n.d.) *FormSubmit – Easy form endpoints*. Available at: https://formsubmit.co/ (Accessed: 1 November 2026).
 - Google (n.d.) *Google Maps URLs*. Available at: https://developers.google.com/maps/documentation/urls/get-started (Accessed: 1 November 2026).
 - Google (n.d.) *Search Central – SEO Starter Guide*. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 1 November 2026).
+- Schema.org (n.d.) *WebPage*. Available at: https://schema.org/WebPage (Accessed: 1 November 2026).
 - MDN Web Docs (n.d.) *Constraint validation*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation (Accessed: 1 November 2026).
 - MDN Web Docs (n.d.) *Fetch API*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API (Accessed: 1 November 2026).
 - W3C (n.d.) *Web Content Accessibility Guidelines (WCAG) 2.2*. Available at: https://www.w3.org/TR/WCAG22/ (Accessed: 1 November 2026).
