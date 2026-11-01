@@ -740,19 +740,23 @@ select {
 
 .gallery-dialog-inner .gallery-close {
   grid-column: 1 / -1;
+  grid-row: 1;
   justify-self: end;
 }
 
 .gallery-dialog-inner .gallery-previous {
   grid-column: 1;
+  grid-row: 3;
 }
 
 .gallery-dialog-inner .gallery-next {
   grid-column: 3;
+  grid-row: 3;
 }
 
 .gallery-dialog-inner .form-note {
   grid-column: 1 / -1;
+  grid-row: 4;
   text-align: center;
   overflow-wrap: anywhere;
 }
