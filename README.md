@@ -9,7 +9,7 @@
 ## Project overview
 This student website project presents Clear Blue Plumbing as a local plumbing business serving Witpoortjie and Roodepoort, Gauteng. It provides business information, service descriptions, stated service areas, an illustrative gallery, and ways to make contact or request a quote.
 
-**Important:** This is an academic project. It does not verify that the business is operating, that the listed address is correct, or that services are available. The business owner should verify all business details, contact information, imagery and map location before real-world use.
+**Important:** This is an academic project. The address shown (13 Moller Street, Witpoortjie, Roodepoort, Gauteng, 1724) has been confirmed by the student against the Clear Blue Plumbing Google Business Profile. This does not independently verify that the business is operating or that services are available. The exact Google Maps place pin still needs to be linked and checked before real-world use.
 
 ## Published website
 - **Hosting platform:** GitHub Pages, publishing the `main` branch from the repository root.
@@ -65,19 +65,17 @@ Both forms submit to the FormSubmit AJAX endpoint configured for `info@cblue.co.
 Form data is sent to a third-party processor. Before collecting real customer information, verify the recipient and provider terms, provide a suitable privacy notice, and obtain any required consent. Do not submit sensitive payment or identity information through these demonstration forms.
 
 ## Images and map
-The Gallery page uses six locally stored WebP files with descriptive filenames: `brass-outdoor-water-tap.webp`, `electric-geyser-copper-pipework.webp`, `solar-geyser-evacuated-tube-collector.webp`, `copper-water-pipes-renovation.webp`, `tiled-bathroom-shower-area.webp` and `clear-blue-plumbing-service-advert.webp`. Each image has concise, descriptive alternative text, intrinsic dimensions and lazy loading. The names and alt text describe the visible subject; they do not claim that the images show completed jobs by Clear Blue Plumbing. Confirm the source, permission and any attribution requirements for each image before public commercial use.
+The Gallery page uses six locally stored WebP files with descriptive filenames: `brass-outdoor-water-tap.webp`, `electric-geyser-copper-pipework.webp`, `solar-geyser-evacuated-tube-collector.webp`, `copper-water-pipes-renovation.webp`, `tiled-bathroom-shower-area.webp` and `clear-blue-plumbing-service-advert.webp`. Each image has concise, descriptive alternative text, intrinsic dimensions and lazy loading. The names and alt text describe the visible subject; they do not claim that the images show completed jobs by Clear Blue Plumbing. The student states that these six images were obtained from the Clear Blue Plumbing Google Business Profile. They are credited to that profile below; the individual photo uploaders and reuse permissions have not been independently verified. Confirm permission and any attribution requirements before public commercial use.
 
-The Contact and Service Areas pages embed Google Maps using the address currently written in the project (13 Moller Street, Witpoortjie, Roodepoort). The business owner must confirm that address and map pin; the embed is not proof of the business's location.
+The Contact and Service Areas pages currently embed Google Maps using the confirmed profile address (13 Moller Street, Witpoortjie, Roodepoort). The student reports that this address matches the Clear Blue Plumbing Google Business Profile. The current embed is still an address-based map search rather than a verified place-specific Google Maps pin; the exact profile share URL is needed to link the map to that business listing.
 
 ## Testing status
-Source-level checks have been made against repository files. The following are **not claimed as completed** unless separately recorded with evidence:
-- End-to-end browser testing of every form, gallery lightbox, service JSON loading/fallback, and search/filter state.
-- Keyboard-only testing of the skip link, navigation, lightbox, FAQ controls and forms.
+Source-level checks have been made against repository files. The student has also reported browser testing of all seven deployed pages, navigation, Services search/filter and JSON fallback, gallery lightbox controls, both forms' validation, responsive layouts, and Chrome/Firefox. These are student-reported checks; no independent browser recording or test report is included in the repository. The following are **not claimed as completed**:
+- Keyboard-only and screen-reader testing of the skip link, navigation, lightbox, FAQ controls and forms.
 - Lighthouse measurements for mobile/desktop performance, accessibility, best practices and SEO, with screenshots or exported reports retained as evidence.
-- Cross-browser checks (at minimum Chrome and Firefox) and responsive checks at phone, tablet and desktop widths.
 - Successful FormSubmit activation and inbox delivery.
-- Verification of all external gallery images and their reuse rights.
-- Confirmation of the correct business address and Google Maps pin.
+- Confirmation of the gallery image source and any reuse/attribution requirements. The student identifies the six images as sourced from the Clear Blue Plumbing Google Business Profile; this source has not been independently checked in this environment.
+- Verification that the embedded map opens the exact Google Business Profile pin. The displayed street address has been checked by the student against the profile, but the current embed still uses an address search.
 - Lighthouse/page-speed measurement, security audit, accessibility audit or live search-engine indexing.
 - Backlink acquisition, social-media promotion or Google Business Profile optimisation.
 
@@ -91,8 +89,7 @@ Before submission, test the deployed site on desktop and mobile, submit test for
 - MDN Web Docs (n.d.) *Constraint validation*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation (Accessed: 1 November 2026).
 - MDN Web Docs (n.d.) *Fetch API*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API (Accessed: 1 November 2026).
 - W3C (n.d.) *Web Content Accessibility Guidelines (WCAG) 2.2*. Available at: https://www.w3.org/TR/WCAG22/ (Accessed: 1 November 2026).
-- Unsplash (n.d.) *Unsplash*. Available at: https://unsplash.com/ (Accessed: 1 November 2026). Retain the individual source page and licence details for each image used.
-- Wikimedia Commons (n.d.) *Wikimedia Commons*. Available at: https://commons.wikimedia.org/ (Accessed: 1 November 2026). Verify each file page's licence and attribution requirements before reuse.
+- Google (n.d.) *Clear Blue Plumbing – Google Business Profile photographs*. Google Maps. Images accessed via the business profile on 1 November 2026. The student identifies the six gallery images as sourced from this profile; individual image uploaders and reuse permissions have not been independently verified.
 
 ## Changelog
 See [CHANGELOG.md](CHANGELOG.md) for the development history and corrections.
