@@ -374,3 +374,8 @@
 - Kept canonical URLs aligned with the GitHub Pages project URL and retained the seven-page XML sitemap and crawler-accessible `robots.txt`.
 - Did not add `LocalBusiness` structured data, ratings, opening hours or service-area claims that have not been independently verified.
 - Search Console ownership verification, sitemap submission, indexing checks, keyword-volume research, Lighthouse SEO evidence and off-page links remain tasks requiring separate access, research or evidence.
+
+## 2026-11-01 — Page-specific meta keywords
+- Added a distinct `meta name="keywords"` tag to each of the seven HTML pages, using relevant plumbing services, locations and page topics.
+- Avoided using one identical keyword list across every page; keywords reflect each page's purpose.
+- Included the tags to address the WEDE5020W Part 3 marking criterion. The tags are not represented as a Google ranking factor.
