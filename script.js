@@ -72,7 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const originalButtonText = submitButton ? submitButton.textContent : "";
       const data = new FormData(form);
       const replyTo = form.querySelector('input[name="_replyto"]');
-      if (replyTo && email) replyTo.value = email.value.trim();
+      if (replyTo && email) {
+        const replyAddress = email.value.trim();
+        replyTo.value = replyAddress;
+        data.set("_replyto", replyAddress);
+      }
 
       // Send trimmed text values to the form processor.
       textFields.forEach(function (field) {
@@ -152,5 +156,71 @@ document.addEventListener("DOMContentLoaded", function () {
     serviceSearch.addEventListener("input", filterServices);
     serviceCategory.addEventListener("change", filterServices);
     filterServices();
+
+    const clearFilters = document.getElementById("clear-service-filters");
+    if (clearFilters) {
+      clearFilters.addEventListener("click", function () {
+        serviceSearch.value = "";
+        serviceCategory.value = "all";
+        filterServices();
+        serviceSearch.focus();
+      });
+    }
+  }
+
+  // Accessible gallery lightbox. The native dialog supports Escape to close.
+  const galleryDialog = document.getElementById("gallery-dialog");
+  const galleryImage = document.getElementById("gallery-dialog-image");
+  const galleryCaption = document.getElementById("gallery-dialog-caption");
+  if (galleryDialog && galleryImage && galleryCaption) {
+    const galleryButtons = Array.from(document.querySelectorAll(".gallery-open"));
+    const closeButton = galleryDialog.querySelector(".gallery-close");
+    const previousButton = galleryDialog.querySelector(".gallery-previous");
+    const nextButton = galleryDialog.querySelector(".gallery-next");
+    let activeImageIndex = 0;
+    let lastTrigger = null;
+
+    function showGalleryImage(index) {
+      activeImageIndex = (index + galleryButtons.length) % galleryButtons.length;
+      const trigger = galleryButtons[activeImageIndex];
+      const image = trigger.querySelector("img");
+      galleryImage.src = image.currentSrc || image.src;
+      galleryImage.alt = image.alt;
+      galleryCaption.textContent = "Image " + (activeImageIndex + 1) + " of " + galleryButtons.length + ": " + image.alt;
+    }
+
+    galleryButtons.forEach(function (trigger, index) {
+      trigger.addEventListener("click", function () {
+        lastTrigger = trigger;
+        showGalleryImage(index);
+        galleryDialog.showModal();
+        closeButton.focus();
+      });
+    });
+
+    closeButton.addEventListener("click", function () {
+      galleryDialog.close();
+    });
+    previousButton.addEventListener("click", function () {
+      showGalleryImage(activeImageIndex - 1);
+    });
+    nextButton.addEventListener("click", function () {
+      showGalleryImage(activeImageIndex + 1);
+    });
+    galleryDialog.addEventListener("click", function (event) {
+      if (event.target === galleryDialog) galleryDialog.close();
+    });
+    galleryDialog.addEventListener("close", function () {
+      if (lastTrigger) lastTrigger.focus();
+    });
+    galleryDialog.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        showGalleryImage(activeImageIndex - 1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        showGalleryImage(activeImageIndex + 1);
+      }
+    });
   }
 });
