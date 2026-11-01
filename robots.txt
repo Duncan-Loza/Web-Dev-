@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://duncan-loza.github.io/Web-Dev-/sitemap.xml
+Sitemap: https://warm-brigadeiros-53b720.netlify.app/sitemap.xml
