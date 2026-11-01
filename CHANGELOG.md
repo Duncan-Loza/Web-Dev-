@@ -322,3 +322,13 @@
 
 
 * Follow-up source check: added the deferred script.js reference to gallery.html so the lightbox controls are initialised on the Gallery page.
+
+
+## Part 3 — Source-Level Verification After Improvements (1 November 2026)
+
+* Re-fetched all seven HTML pages from the main branch and checked that each has exactly one title element, one meta description and one primary h1.
+* Verified that all seven pages contain canonical metadata and a skip link connected to the main-content target.
+* Verified that the Services, Contact, Enquiry and Gallery pages load script.js where required.
+* Verified that gallery.html contains six lightbox triggers and the dialog markup.
+* Parsed services.json and confirmed that it contains eight service records; confirmed script.js contains the asynchronous fetch, fallback, filtering, form reply-to and lightbox handlers.
+* These are repository/source checks only. The public Netlify deployment could not be reached from this environment, so browser rendering, mobile layout, JavaScript runtime behaviour, third-party form delivery, Lighthouse scores and live sitemap/robots availability remain unverified.
