@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!field) return;
       field.addEventListener("input", function () {
         field.setCustomValidity(
-          field.value.trim().length > 0 ? "" : messageText
+          field.value.trim().length >= Math.max(1, field.minLength || 0) ? "" : messageText
         );
       });
       field.addEventListener("blur", function () {
-        if (field.value.trim().length === 0) {
+        if (field.value.trim().length < Math.max(1, field.minLength || 0)) {
           field.setCustomValidity(messageText);
         }
       });
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Prevent whitespace-only text from passing browser length checks.
       const textFields = [name, message, location].filter(Boolean);
       const blankField = textFields.find(function (field) {
-        return field.value.trim().length === 0;
+        return field.value.trim().length < Math.max(1, field.minLength || 0);
       });
       if (blankField) {
         blankField.setCustomValidity("Please complete this field with meaningful information.");
