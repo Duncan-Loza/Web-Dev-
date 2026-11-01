@@ -366,3 +366,11 @@
 - Refined the gallery lightbox, map frame, FAQ panels, service filters and form feedback styling.
 - Preserved visible keyboard focus, skip-link styling and reduced-motion support.
 - Source-level update only; verify the deployed appearance at desktop, tablet and mobile widths after GitHub Pages publishes the commit.
+
+## SEO and structured-data refinement
+- Refined all seven page titles and meta descriptions so each page has distinct, descriptive search metadata aligned with its content and local search intent.
+- Added matching Open Graph descriptions, the `en_ZA` locale, and Twitter title/description metadata for consistent link previews.
+- Added Schema.org `WebPage` JSON-LD to each page, identifying its title, description, canonical URL, language and parent website.
+- Kept canonical URLs aligned with the GitHub Pages project URL and retained the seven-page XML sitemap and crawler-accessible `robots.txt`.
+- Did not add `LocalBusiness` structured data, ratings, opening hours or service-area claims that have not been independently verified.
+- Search Console ownership verification, sitemap submission, indexing checks, keyword-volume research, Lighthouse SEO evidence and off-page links remain tasks requiring separate access, research or evidence.
