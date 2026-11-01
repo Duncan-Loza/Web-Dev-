@@ -257,3 +257,24 @@
 * Kept asynchronous form submission, disabled the submit button while sending, and retained visible success/failure feedback. Actual email delivery still depends on activation by the third-party form recipient and must be tested.
 * Improved small-screen navigation with a two-column link layout, made form controls and buttons easier to use on touch screens, constrained content to the viewport, and made the embedded map responsive.
 * Existing tablet and mobile breakpoints were retained and extended. Browser testing at actual mobile and tablet viewport sizes remains required.
+
+
+## Part 3 — Documentation, SEO and submission-readiness corrections (1 November 2026)
+
+### README consolidation
+* Reorganised the README into one current project description, seven-page inventory, implementation summary, limitations, testing status and reference list.
+* Corrected older statements that described the forms as mailto-only or client-side-only; the current source uses an AJAX FormSubmit endpoint.
+* Distinguished implemented source features from work that has not been verified in a real browser or inbox.
+* Added keyword themes used in on-page copy and stated that no paid keyword-volume study or off-page SEO campaign is claimed.
+
+### Sitemap and crawler directives
+* Updated canonical sitemap URLs and the robots.txt sitemap directive to the Netlify project domain recorded for this deployment.
+* Included all seven HTML pages in sitemap.xml.
+* The exact public deployment URL and published sitemap/robots files still require direct confirmation. If the site's primary domain differs, update both files to that exact domain.
+
+### Accuracy and assessment evidence
+* Clarified that the quote form collects information for a manual business response; it does not calculate a quote or determine availability automatically.
+* Clarified that an AJAX response does not prove inbox delivery; FormSubmit activation and a real test remain necessary.
+* Documented that gallery images are generic illustrative assets, not verified business work, and that image licensing/attribution must be checked.
+* Documented the unverified business address/map pin and outstanding browser, performance, security, accessibility and indexing checks.
+* Added references for the technical guidance and third-party services documented in the README.
