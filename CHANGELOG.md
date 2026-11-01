@@ -332,3 +332,10 @@
 * Verified that gallery.html contains six lightbox triggers and the dialog markup.
 * Parsed services.json and confirmed that it contains eight service records; confirmed script.js contains the asynchronous fetch, fallback, filtering, form reply-to and lightbox handlers.
 * These are repository/source checks only. The public Netlify deployment could not be reached from this environment, so browser rendering, mobile layout, JavaScript runtime behaviour, third-party form delivery, Lighthouse scores and live sitemap/robots availability remain unverified.
+
+## 2026-11-01 — Visual refinement
+
+- Added a consistent `page-banner` treatment to the first content section on all seven pages, with clearer heading hierarchy, restrained blue accents, improved spacing and responsive sizing.
+- Refined the navigation bar and added an active-page indicator to each page's navigation link.
+- Added subtle, consistent panel borders, card depth, hover feedback and footer detailing while retaining the existing colour palette and simple student-project structure.
+- Source-level verification confirmed that all seven pages contain a page banner and exactly one active navigation marker. Visual browser testing remains outstanding.
