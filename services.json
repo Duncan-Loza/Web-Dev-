@@ -1,0 +1,42 @@
+[
+  {
+    "category": "repairs",
+    "title": "General Plumbing Repairs",
+    "description": "Everyday plumbing repairs for homes, rental properties, and small businesses."
+  },
+  {
+    "category": "repairs",
+    "title": "Leak Repairs",
+    "description": "Assistance with finding and fixing leaking pipes, fittings, and fixtures."
+  },
+  {
+    "category": "drainage",
+    "title": "Blocked Drains",
+    "description": "Help with clearing blocked or slow-draining sinks, drains, and pipes."
+  },
+  {
+    "category": "repairs",
+    "title": "Toilet Repairs",
+    "description": "Assistance with toilets that are leaking, blocked, or not flushing correctly."
+  },
+  {
+    "category": "repairs",
+    "title": "Tap Repairs",
+    "description": "Repairs for dripping, leaking, or faulty taps in the home or workplace."
+  },
+  {
+    "category": "repairs",
+    "title": "Pipe Repairs",
+    "description": "Assistance with damaged, burst, or corroded plumbing pipes."
+  },
+  {
+    "category": "maintenance",
+    "title": "Plumbing Maintenance",
+    "description": "General plumbing upkeep to help identify and prevent potential plumbing problems."
+  },
+  {
+    "category": "urgent",
+    "title": "Emergency Plumbing Assistance",
+    "description": "Support for urgent plumbing issues that require prompt attention."
+  }
+]
