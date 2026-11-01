@@ -11,6 +11,14 @@ This student website project presents Clear Blue Plumbing as a local plumbing bu
 
 **Important:** This is an academic project. It does not verify that the business is operating, that the listed address is correct, or that services are available. The business owner should verify all business details, contact information, imagery and map location before real-world use.
 
+## Published website
+- **Hosting platform:** GitHub Pages, publishing the `main` branch from the repository root.
+- **Published URL:** https://duncan-loza.github.io/Web-Dev-/
+- **Sitemap:** https://duncan-loza.github.io/Web-Dev-/sitemap.xml
+- **Crawler instructions:** https://duncan-loza.github.io/Web-Dev-/robots.txt
+
+The GitHub Pages URL includes the repository name because this is a project site. Netlify is no longer the documented hosting target.
+
 ## Website pages
 | Page | Purpose |
 |---|---|
@@ -26,7 +34,7 @@ This student website project presents Clear Blue Plumbing as a local plumbing bu
 ### Functionality
 - The Services page loads its eight service records asynchronously from `services.json` using the Fetch API, builds the service cards with JavaScript, and retains semantic HTML cards as a fallback if the data request fails. Search and category filtering update the visible cards and result count; a clear-filters control resets both controls, and a no-results message appears when no cards match.
 - The Gallery page includes a native HTML dialog lightbox with previous/next controls, Escape-to-close support, arrow-key navigation, descriptive alternative text, and focus return to the selected thumbnail.
-- Each page includes a keyboard skip link to the main content. Canonical URLs and Open Graph/Twitter preview metadata are included for the current Netlify project domain.
+- Each page includes a keyboard skip link to the main content. Canonical URLs and Open Graph/Twitter preview metadata are included for the GitHub Pages project domain.
 - The Services page uses native HTML `details`/`summary` elements for an FAQ accordion.
 - The contact and quote forms use HTML constraints and JavaScript checks for required fields, email format, phone-number digit count and meaningful text.
 - Form submissions use asynchronous `fetch()` requests to the FormSubmit AJAX endpoint. The visitor receives an on-page status message without a page reload.
@@ -36,7 +44,7 @@ This student website project presents Clear Blue Plumbing as a local plumbing bu
 ### SEO and technical files
 - Each of the seven HTML pages has its own title and meta description.
 - Pages use descriptive headings, internal navigation and image alternative text.
-- `robots.txt` and `sitemap.xml` are included. Their canonical domain must match the final published domain; the current files use the Netlify project URL recorded for this deployment.
+- `robots.txt` and `sitemap.xml` are included. Their canonical domain must match the final published domain; the files use the GitHub Pages project URL `https://duncan-loza.github.io/Web-Dev-`.
 - The sitemap includes all seven HTML pages.
 - Keyword themes used in page copy include **plumber in Roodepoort**, **plumbing services in Witpoortjie**, **plumbing repairs**, **leak repairs**, **blocked drains**, **toilet repairs** and **tap repairs**. These are on-page keyword choices, not the result of a paid keyword-volume study.
 - Search-intent mapping: the Home page targets the broad local plumber query; Services targets service-specific searches; Service Areas targets location coverage; Contact and Enquiry support high-intent contact/quote searches; Gallery supports image discovery but is not a substitute for genuine project evidence.
