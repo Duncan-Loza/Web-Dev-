@@ -151,6 +151,9 @@ document.addEventListener("DOMContentLoaded", function () {
       serviceResults.textContent = visibleCount === 1
         ? "Showing 1 matching service."
         : "Showing " + visibleCount + " matching services.";
+
+      const emptyMessage = document.getElementById("service-empty");
+      if (emptyMessage) emptyMessage.hidden = visibleCount !== 0;
     }
 
     serviceSearch.addEventListener("input", filterServices);
