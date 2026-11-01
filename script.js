@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const serviceResults = document.getElementById("service-results");
 
   if (serviceSearch && serviceCategory && serviceList && serviceResults) {
-    const serviceCards = Array.from(serviceList.querySelectorAll("article"));
+    let serviceCards = Array.from(serviceList.querySelectorAll("article"));
 
     function filterServices() {
       const query = serviceSearch.value.trim().toLowerCase();
@@ -159,6 +159,49 @@ document.addEventListener("DOMContentLoaded", function () {
     serviceSearch.addEventListener("input", filterServices);
     serviceCategory.addEventListener("change", filterServices);
     filterServices();
+
+    // Load the service catalogue from a local JSON file. The HTML cards
+    // remain available as a fallback if the request fails.
+    fetch("services.json")
+      .then(function (response) {
+        if (!response.ok) throw new Error("Service data could not be loaded.");
+        return response.json();
+      })
+      .then(function (services) {
+        if (!Array.isArray(services) || services.length === 0) {
+          throw new Error("The service data is empty or invalid.");
+        }
+
+        const validServices = services.filter(function (service) {
+          return service &&
+            typeof service.title === "string" &&
+            typeof service.description === "string" &&
+            ["repairs", "drainage", "maintenance", "urgent"].includes(service.category);
+        });
+
+        if (validServices.length === 0) {
+          throw new Error("No valid service records were found.");
+        }
+
+        const cards = validServices.map(function (service) {
+          const article = document.createElement("article");
+          article.dataset.category = service.category;
+          const heading = document.createElement("h3");
+          heading.textContent = service.title;
+          const description = document.createElement("p");
+          description.textContent = service.description;
+          article.append(heading, description);
+          return article;
+        });
+
+        serviceList.replaceChildren.apply(serviceList, cards);
+        serviceCards = cards;
+        filterServices();
+      })
+      .catch(function () {
+        // Keep the original semantic HTML cards and search functionality.
+        filterServices();
+      });
 
     const clearFilters = document.getElementById("clear-service-filters");
     if (clearFilters) {
