@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (phone) {
       function validatePhone() {
-        const digits = phone.value.replace(/\\D/g, "");
+        const digits = phone.value.replace(/\D/g, "");
         const valid = digits.length >= 7 && digits.length <= 15;
         phone.setCustomValidity(
           valid ? "" : "Enter a valid phone number containing 7 to 15 digits."
