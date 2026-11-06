@@ -3,7 +3,7 @@
 ## Student and module details
 - **Student:** Duncan Loza
 - **Student number:** ST10527661
-- **Module:** WEDE5020W – Introduction to Web Development
+- **Module:** WEDE5020W 
 - **Project:** Clear Blue Plumbing website
 
 ## Project overview
